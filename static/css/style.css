@@ -88,6 +88,7 @@ ul {
     height: 63px;
     justify-content: center;
     align-items: center;
+    margin-top: 90px;
 }
 
 
@@ -105,9 +106,8 @@ ul {
 
 
 .scrollable-container {
-    max-height: 780px;
+    max-height: 870px;
     overflow-y: auto;
-    padding-top: 90px;
 }
 
 
@@ -231,7 +231,6 @@ ul {
 
 .profile_card {
     width: 348px;
-    margin-top: 158px;
     height: 686px;
     background: #EEEEEE;
     border: 3px solid #0A292C;
