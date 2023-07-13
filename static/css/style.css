@@ -803,13 +803,10 @@ ul {
 
 
 .avatar-container {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 20px;
 }
 
@@ -829,4 +826,59 @@ ul {
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
+}
+
+.chat_card {
+    width: 348px;
+    height: 505px;
+    background: #EEEEEE;
+    border: 3px solid #0A292C;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.update_chat_link {
+    text-decoration: none;
+    color: white;
+}
+
+.chat_admin {
+    color: white;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+}
+
+.chat_users {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.about_user_chat {
+    text-align: center;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_user_name_heading_chat {
+    margin-block-start: 0;
+}
+
+.about_user_name_chat {
+    width: 236px;
+    height: 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    margin-top: 0px;
 }
