@@ -39,11 +39,18 @@ const sub = centrifuge.subscribe(channelName, function (ctx) {
     chatMessageContent.classList.add('message-content');
 
     if (ctx.data.fileMessage) {
-        const chatFileLink = document.createElement('a');
-        chatFileLink.href = ctx.data.fileUrl;
-        chatFileLink.target = '_blank';
-        chatFileLink.textContent = ctx.data.message;
-        chatMessageContent.appendChild(chatFileLink);
+        if (ctx.data.isImage) {
+            const chatImage = document.createElement('img');
+            chatImage.src = ctx.data.fileUrl;
+            chatImage.alt = ctx.data.message;
+            chatMessageContent.appendChild(chatImage);
+        } else {
+            const chatFileLink = document.createElement('a');
+            chatFileLink.href = ctx.data.fileUrl;
+            chatFileLink.target = '_blank';
+            chatFileLink.textContent = ctx.data.message;
+            chatMessageContent.appendChild(chatFileLink);
+        }
     } else {
         const chatNewMessage = document.createTextNode(ctx.data.message);
         chatMessageContent.appendChild(chatNewMessage);

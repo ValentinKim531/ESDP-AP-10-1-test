@@ -93,12 +93,14 @@ def upload_file(request, room_uuid):
     file_instance = File(file=uploaded_file, user=request.user, room=room)
     file_instance.save()
 
+    is_image = uploaded_file.content_type.startswith('image')
+
     chat_message = ChatMessage(room=room, message=uploaded_file.name, user=request.user,
                                file=file_instance)
     chat_message.file_url = file_instance.file.url
     chat_message.save()
 
-    return JsonResponse({'file_url': file_instance.file.url})
+    return JsonResponse({'file_url': file_instance.file.url, 'is_image': is_image})
 
 
 @csrf_exempt
