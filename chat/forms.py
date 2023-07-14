@@ -1,4 +1,7 @@
 from django import forms
+from django.forms.utils import flatatt
+from django.utils.html import format_html
+
 from .models import ChatRoom, Account
 
 
@@ -19,9 +22,8 @@ class GroupChatForm(forms.ModelForm):
         self.fields['description'].label = False
         self.fields['description'].widget.attrs['placeholder'] = 'Описание чата'
         self.fields['description'].widget.attrs['class'] = 'chat_description_field'
-        self.fields['avatar'].label = 'Фотография чата'
         self.fields['avatar'].widget.attrs['class'] = 'chat_avatar_label'
-
+        self.fields['avatar'].label = False
 
     users = UserChoiceField(
         queryset=Account.objects.all(),
