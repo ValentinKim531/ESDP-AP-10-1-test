@@ -8,6 +8,7 @@ from accounts.cookie_auth import CookieJWTAuthentication
 from rest_framework.exceptions import AuthenticationFailed
 from django.http import HttpResponseRedirect
 from rest_framework.permissions import IsAuthenticated
+from datetime import timedelta
 
 from chat.models import ChatRoom, ChatType, ChatMessage, File
 
@@ -28,11 +29,24 @@ class RoomView(View):
         else:
             other_user = None
 
-        old_messages = ChatMessage.objects.filter(room=room).order_by('timestamp')
+        old_messages = list(ChatMessage.objects.filter(room=room).order_by('timestamp'))
+
+        unique_messages = []
+        for i in range(len(old_messages) - 1):
+            if (old_messages[i].message != old_messages[i + 1].message or
+                    old_messages[i].file != old_messages[i + 1].file or
+                    old_messages[i].file_url != old_messages[i + 1].file_url or
+                    old_messages[i + 1].timestamp - old_messages[i].timestamp > timedelta(seconds=0.1)):
+                unique_messages.append(old_messages[i])
+
+        if old_messages and (unique_messages and old_messages[-1].message != unique_messages[-1].message):
+            unique_messages.append(old_messages[-1])
+
         files = File.objects.filter(room=room)
+
         return render(request, 'chat/room.html',
                       {'room_name': room.name, 'room_uuid': str(room.id),
-                       'old_messages': old_messages, 'room': room,
+                       'old_messages': unique_messages, 'room': room,
                        'other_user': other_user, 'files': files})
 
 
