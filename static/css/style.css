@@ -755,3 +755,19 @@ ul {
     margin-left: 100px;
 }
 
+.resident {
+    margin-top: 300px;
+
+}
+.login_h.ind{
+    margin-left: 90px;
+    margin-bottom: 50px;
+}
+
+.ind_butt {
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
