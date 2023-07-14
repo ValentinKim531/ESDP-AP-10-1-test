@@ -22,7 +22,7 @@ function handleFileUpload(fileInput, centrifuge, roomId, userEmail, userFirstNam
         const data = await response.json();
 
         const message = {
-            'message': 'File uploaded: ' + file.name,
+            'message': 'File uploaded via fileSharing: ' + file.name,
             'fileUrl': data.file_url,
             'fileMessage': true,
             'user': userEmail,

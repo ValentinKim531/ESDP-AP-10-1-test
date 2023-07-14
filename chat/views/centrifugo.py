@@ -93,7 +93,7 @@ def upload_file(request, room_uuid):
     file_instance = File(file=uploaded_file, user=request.user, room=room)
     file_instance.save()
 
-    chat_message = ChatMessage(room=room, message='File uploaded: ' + uploaded_file.name, user=request.user,
+    chat_message = ChatMessage(room=room, message='File uploaded via upload_file: ' + uploaded_file.name, user=request.user,
                                file=file_instance)
     chat_message.file_url = file_instance.file.url
     chat_message.save()
