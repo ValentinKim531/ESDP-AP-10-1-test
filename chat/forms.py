@@ -12,6 +12,16 @@ class GroupChatForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         if user is not None:
             self.fields['users'].queryset = Account.objects.exclude(id=user.id)
+            self.fields['users'].label = 'Выберите пользователей'
+        self.fields['name'].label = False
+        self.fields['name'].widget.attrs['placeholder'] = 'Введите название чата'
+        self.fields['name'].widget.attrs['class'] = 'chat_name_field'
+        self.fields['description'].label = False
+        self.fields['description'].widget.attrs['placeholder'] = 'Описание чата'
+        self.fields['description'].widget.attrs['class'] = 'chat_description_field'
+        self.fields['avatar'].label = 'Фотография чата'
+        self.fields['avatar'].widget.attrs['class'] = 'chat_avatar_label'
+
 
     users = UserChoiceField(
         queryset=Account.objects.all(),
@@ -21,4 +31,3 @@ class GroupChatForm(forms.ModelForm):
     class Meta:
         model = ChatRoom
         fields = ['name', 'description', 'avatar', 'users']
-
