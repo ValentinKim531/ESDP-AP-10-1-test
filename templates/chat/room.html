@@ -16,6 +16,7 @@
 <input type="hidden" id="user-first-name" value="{{ user.first_name }}">
 <input type="hidden" id="user-last-name" value="{{ user.last_name }}">
 <input type="hidden" id="user-email" value="{{ user.email }}">
+<input type="hidden" id="user-avatar-url" value="{{ user.avatar.image.url }}">
 {% endif %}
 
 <nav>
@@ -73,7 +74,7 @@
             {{ message.message }}
             {% endif %}
         </div>
-        <div class="timestamp">{{ message.timestamp|date:"F d, Y, H:i" }}</div>
+        <div class="timestamp">{{ message.timestamp|date:"d.m.Y, H:i" }}</div>
     </li>
     {% else %}
     <li class="other-user">
@@ -90,7 +91,7 @@
             {{ message.message }}
             {% endif %}
         </div>
-        <div class="timestamp">{{ message.timestamp|date:"F d, Y, H:i" }}</div>
+        <div class="timestamp">{{ message.timestamp|date:"d.m.Y, H:i" }}</div>
     </li>
     {% endif %}
     {% endfor %}
