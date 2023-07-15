@@ -3,6 +3,25 @@ import { handleFileUpload } from './fileSharing.js';
 const roomId = JSON.parse(document.getElementById('room-id').textContent);
 const chatThread = document.querySelector('#chat-thread');
 const messageInput = document.querySelector('#chat-message-input');
+const picker = document.querySelector('#emoji-picker');
+const emojiButton = document.querySelector('#emoji-button');
+
+emojiButton.addEventListener('click', () => {
+    if (picker.style.display === 'none') {
+        const messageInputField = document.querySelector('.chat-message');
+        const boundingRect = messageInputField.getBoundingClientRect();
+        picker.style.left = `${boundingRect.left}px`;
+        picker.style.bottom = `${window.innerHeight - boundingRect.top}px`;
+        picker.style.display = 'block';
+    } else {
+        picker.style.display = 'none';
+    }
+});
+
+picker.addEventListener('emoji-click', event => {
+    const messageInputDom = document.querySelector('#chat-message-input');
+    messageInputDom.value += event.detail.emoji.unicode;
+});
 
 const centrifuge = new Centrifuge("ws://" + window.location.host + "/connection/websocket");
 centrifuge.on('connect', function (ctx) {
@@ -94,6 +113,7 @@ messageInput.onkeyup = function (e) {
         });
 
         messageInput.value = '';
+        picker.style.display = 'none';
     }
 };
 

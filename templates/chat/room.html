@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/chat.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/centrifugal/centrifuge-js@2.8.3/dist/centrifuge.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
 </head>
 
 <body>
@@ -101,8 +102,9 @@
     </label>
     <input id="chat-file-input" class="chat-file-input" type="file"/>
     <input id="chat-message-input" class="chat-message-input" type="text" autocomplete="off" autofocus/>
+    <button id="emoji-button" class="emoji-button">🙂</button>
 </div>
-
+<emoji-picker id="emoji-picker" style="display: none;"></emoji-picker>
 {{ room_uuid|json_script:"room-id" }}
 
 {% block extrajs %}
