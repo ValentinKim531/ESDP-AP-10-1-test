@@ -6,6 +6,7 @@
     <meta charset="utf-8"/>
     <title>Chat Room</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/chat.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/centrifugal/centrifuge-js@2.8.3/dist/centrifuge.min.js"></script>
 </head>
 
@@ -95,8 +96,11 @@
 </ul>
 
 <div class="chat-message">
-    <input id="chat-message-input" class="chat-message-input" type="text" autocomplete="off" autofocus/>
+    <label for="chat-file-input" class="chat-file-label">
+        <i class="fas fa-paperclip"></i>
+    </label>
     <input id="chat-file-input" class="chat-file-input" type="file"/>
+    <input id="chat-message-input" class="chat-message-input" type="text" autocomplete="off" autofocus/>
 </div>
 
 {{ room_uuid|json_script:"room-id" }}

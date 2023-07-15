@@ -8,6 +8,8 @@ body {
     background-attachment: fixed;
 }
 
+/* Чат */
+
 .chat-thread {
     margin: 24px auto 0 auto;
     padding: 0 20px 0 0;
@@ -33,7 +35,7 @@ body {
     background-color: rgba(25, 147, 147, 0.2);
 }
 
-/* Chat - Avatar */
+/* Аватар */
 .chat-thread li:before {
     position: absolute;
     top: 0;
@@ -63,7 +65,7 @@ body {
     left: -80px;
 }
 
-/* Chat - Speech Bubble Arrow */
+/* Облако сообщений */
 .chat-thread li:after {
     position: absolute;
     top: 15px;
@@ -111,22 +113,45 @@ body {
     left: -15px;
 }
 
+/* Окно ввода сообщений */
 .chat-message {
     position: fixed;
     bottom: 18px;
+    display: flex;
+    align-items: center;
 }
 
 .chat-message-input {
-    width: 100%;
+    width: calc(100% - 50px);
     height: 48px;
     font: 32px/48px "Noto Sans", sans-serif;
     background: none;
     color: #0AD5C1;
-    border: 0;
-    border-bottom: 1px solid rgba(25, 147, 147, 0.2);
+    border: 1px solid rgba(25, 147, 147, 0.2);
+    border-radius: 15px;
+    padding: 0 10px;
     outline: none;
 }
 
+.chat-file-label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(25, 147, 147, 0.2);
+    color: #0AD5C1;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+.chat-file-input {
+    display: none;
+}
+
+
+/* Навигационная панель */
 nav {
     width: 100%;
     background: #082a2c;
