@@ -43,6 +43,7 @@ const sub = centrifuge.subscribe(channelName, function (ctx) {
             const chatImage = document.createElement('img');
             chatImage.src = ctx.data.fileUrl;
             chatImage.alt = ctx.data.message;
+            chatImage.style.maxWidth = '300px';
             chatMessageContent.appendChild(chatImage);
         } else {
             const chatFileLink = document.createElement('a');
