@@ -74,22 +74,6 @@ class NewsSerializer(serializers.ModelSerializer):
         read_only = ("id", "create_at", "update_at", "is_deleted")
 
 
-class UserBookedSerializer(serializers.ModelSerializer):
-    event = EventsSerializer()
-
-    class Meta:
-        model = UserBooked
-        fields = (
-            "id",
-            "resident",
-            "event",
-            "booking_date",
-            "date_of_payment",
-            "cancellation_date",
-        )
-        read_only = ("id",)
-
-
 class ReviewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
@@ -163,6 +147,23 @@ class AccountSerializer(serializers.ModelSerializer):
             "facts_about_me",
             "site",
             "social_links",
+        )
+        read_only = ("id",)
+
+
+class UserBookedSerializer(serializers.ModelSerializer):
+    event = EventsSerializer(read_only=True)
+    resident = AccountSerializer(read_only=True)
+
+    class Meta:
+        model = UserBooked
+        fields = (
+            "id",
+            "resident",
+            "event",
+            "booking_date",
+            "date_of_payment",
+            "cancellation_date",
         )
         read_only = ("id",)
 

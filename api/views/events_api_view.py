@@ -6,8 +6,8 @@ from rest_framework.utils import json
 from rest_framework.views import APIView
 
 from accounts.models import Account
-from api.serializers import EventsSerializer
-from webapp.models import Events, Cities, TypeEvents, Image
+from api.serializers import EventsSerializer, UserBookedSerializer
+from webapp.models import Events, Cities, TypeEvents, Image, UserBooked
 
 
 class EventsSimpleView(APIView):
@@ -67,5 +67,25 @@ class EventApiView(APIView):
         return Response({f"delte - {kwargs.get('pk')}": "мягкое удаление успешно выполнелось"})
 
 
+class EventsBookedSimpleView(APIView):
 
+    def get(self, request, *args, **kwargs):
+        try:
+            events = UserBooked.objects.all()
+        except ObjectDoesNotExist:
+            Response({"error": "введите существующий pk"})
+        else:
+            serializer = UserBookedSerializer(events, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def post(self, request, *args, **kwargs):
+        data = json.loads(request.body)
+        try:
+            data['event'] = Events.objects.get(id=data.get('event'))
+            data['resident'] = Account.objects.get(id=data.get('resident'))
+            events = UserBooked.objects.create(**data)
+            return Response({"create": "успешно создано"})
+        except Exception:
+            response = Response({'errors': "ошибка"})
+            response.status_code = 400
+            return response
