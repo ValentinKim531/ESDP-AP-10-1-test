@@ -945,6 +945,7 @@ ul {
 form > p {
     display: flex;
     flex-direction: column;
+}
 
   
 .log_form {
