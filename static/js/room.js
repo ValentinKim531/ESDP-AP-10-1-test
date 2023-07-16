@@ -6,6 +6,10 @@ const messageInput = document.querySelector('#chat-message-input');
 const picker = document.querySelector('#emoji-picker');
 const emojiButton = document.querySelector('#emoji-button');
 
+messageInput.addEventListener('click', function() {
+    picker.style.display = 'none';
+});
+
 emojiButton.addEventListener('click', () => {
     if (picker.style.display === 'none') {
         const messageInputField = document.querySelector('.chat-message');
