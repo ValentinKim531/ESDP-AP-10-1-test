@@ -5,6 +5,10 @@
 <div class="about_current_page">
     <h1 class="newsline_header">РЕЗИДЕНТЫ</h1>
 </div>
+<div class="about_current_page">
+    {% include 'partial/search.html' %}
+</div>
+
 <div class="scrollable-container">
     <div class="block_profiles">
         {% for account in accounts %}
