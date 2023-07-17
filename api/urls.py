@@ -38,7 +38,7 @@ urlpatterns = [
     path("reviews/<int:pk>", ReviewApiView.as_view(), name="reviews_api"),
     path("newsline/", NewslineApiView.as_view(), name="newsline_api"),
     path("accounts/", AccountsSimpleView.as_view(), name="accounts_list"),
-    path('accounts/<int:pk>', AccountApiView.as_view(), name="events"),
+    path('accounts/<int:pk>', AccountApiView.as_view(), name="accounts"),
     path('user_like/<int:id>', UserLikeView.as_view(), name='user_like'),
     path('check_auth/', CheckAuthView.as_view(), name='check_auth'),
 ]

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "corsheaders",
     # "debug_toolbar",
     'bootstrap5',
+    'django_bootstrap5',
     "webapp",
     "accounts",
     'chat',
