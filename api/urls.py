@@ -41,7 +41,6 @@ urlpatterns = [
     path("newsline/", NewslineApiView.as_view(), name="newsline_api"),
     path("accounts/", AccountsSimpleView.as_view(), name="accounts_list"),
     path('accounts/<int:pk>', AccountApiView.as_view(), name="accounts"),
-    path('accounts/<int:pk>', AccountApiView.as_view(), name="events"),
     path('chat_request/', ChatRequestApiView.as_view(), name="chat_request"),
     path('sub_request/', SubscriptionLevelRequestApiView.as_view(), name="sub_request"),
     path('sub_level/', SubscriptionLevelApiView.as_view(), name="sub_level"),
