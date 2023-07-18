@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Group Detail{% endblock %}
+{% block header %}
+{% endblock %}
+{% block content %}
+    <div class="scrollable-container">
+        <div class="about_current_page">
+            <h1 class="newsline_header">{{ group.name.upper }}</h1>
+        </div>
+        <div class="block_profiles">
+            <div class="chat_card">
+                {% if group.avatar %}
+                    <div class="avatar-container">
+                        <img src="{{ group.avatar.url }}" alt="Group Avatar" class="avatar-image">
+                    </div>
+                {% else %}
+                    <div class="avatar-container">
+                        <img src="/uploads/groupchats/default.png" alt="Group Avatar" class="avatar-image">
+                    </div>
+                {% endif %}
+                <p class="chat_card_description"><b>Описание:</b> {{ group.description }}</p>
+                {% if group.creator == current_user %}
+                    <a href="{% url 'update_chat' room_uuid=group.id %}" class="update_chat_link">
+                        <div class="profile_card_button_wrapper">
+                            <span class="profile_card_button">
+                                Редактировать
+                            </span>
+                        </div>
+                    </a>
+                {% endif %}
+            </div>
+            <h3 class="chat_admin">Администратор:</h3>
+            <div class="user_card">
+                <a href="{% url 'account_detail' group.creator.pk %}" class="user_card_link">
+                    <div class="about_user_chat">
+                        <div class="about_user_name_chat">
+                            <h4 class="about_user_name_heading_chat">{{ group.creator.first_name }} {{ group.creator.last_name }}</h4>
+                        </div>
+                    </div>
+                    <div class="user_pic_div">
+                        {% if not group.creator.avatar %}
+                            <img src="{% static 'svg/user.png' %}" alt="Avatar" class="user_pic">
+                        {% else %}
+                            <img src="{{ group.creator.avatar.image.url }}" alt="" class="user_pic">
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+            <h3 class="chat_users">Участники:</h3>
+            {% for member in group.users.all %}
+                {% if member != group.creator %}
+                    <div class="user_card">
+                        <a href="{% url 'account_detail' member.pk %}" class="user_card_link">
+                            <div class="about_user_chat">
+                                <div class="about_user_name_chat">
+                                    <h4 class="about_user_name_heading_chat">{{ member.first_name }} {{ member.last_name }}</h4>
+                                </div>
+                            </div>
+                            <div class="user_pic_div">
+                                {% if not member.avatar %}
+                                    <img src="{% static 'svg/user.png' %}" alt="Avatar" class="user_pic">
+                                {% else %}
+                                    <img src="{{ member.avatar.image.url }}" alt="" class="user_pic">
+                                {% endif %}
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
