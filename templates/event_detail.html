@@ -23,18 +23,32 @@
                         <p style="font-style: italic;font-weight: 400;font-size: 18px;line-height: 22px;color: #000000;">{{ event.description }}</p>
                     </div>
                 </div>
+
                 <div class="availible">
                     <p style="font-style: normal;font-weight: 500;font-size: 20px;line-height: 27px;text-align: center;">{{ available_seats }}
                         свободно из {{ event.number_of_seats }}</p>
                 </div>
-
-                <a href="#" class="thank_profile_link">
+                {%if available_seats != 0 %}
+                {%if not events_booked %}
+                <a href="{% url 'events_booked' event.pk %}" class="thank_profile_link">
                     <div class="profile_card_button_wrapper">
                     <span class="profile_card_button">
                         Зарегистрироваться
                     </span>
                     </div>
                 </a>
+                {% endif %}
+                {% endif %}
+                {%if events_booked %}
+                <a href="{% url 'events_booked_delete' event.pk %}" class="thank_profile_link">
+                    <div class="profile_card_button_wrapper">
+                    <span class="profile_card_button">
+                        Отмена
+                    </span>
+                    </div>
+                </a>
+                {% endif %}
+
             </div>
         </div>
     </div>
