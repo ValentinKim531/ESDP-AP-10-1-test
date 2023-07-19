@@ -64,8 +64,13 @@ def event(request, event_id=None):
 
 def get_events(request):
     date = request.GET.get('date')
+    print(date)
+    year = request.GET.get('year')
+    print(year)
+    month = request.GET.get('month')
+    print(month)
     events = []
-    events_all = Events.objects.all().filter(events_at__day=date).exclude(is_deleted=True)
+    events_all = Events.objects.all().filter(events_at__day=date, events_at__year=year, events_at__month=month).exclude(is_deleted=True)
     for event in events_all:
         single_event = {'name': event.name, 'url': f'events/{event.pk}'}
         events.append(single_event)

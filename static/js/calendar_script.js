@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const dates = document.getElementsByClassName('date');
+    const query = new URLSearchParams(window.location.search);
+    const currentMonth = Object.fromEntries(query.entries()).month
+    const [year, month] = currentMonth.split("-");
     for (let i = 0; i < dates.length; i++) {
         dates[i].addEventListener('click', function () {
             const date = dates[i].innerHTML;
-            console.log(date)
-            const url = `/get_events/?date=${date}`;
+            const url = `/get_events/?date=${date}&year=${year}&month=${month}`;
 
             fetch(url)
                 .then(response => response.json())
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (data.length === 0) {
                         const noEventsMsg = document.createElement('p');
                         noEventsMsg.className = 'no_events_for_today';
-                        noEventsMsg.textContent = 'No events for today.';
+                        noEventsMsg.textContent = 'События не найдены';
                         eventsContainer.appendChild(noEventsMsg);
                     } else {
                         for (let j = 0; j < data.length; j++) {

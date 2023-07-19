@@ -1,6 +1,5 @@
 from calendar import HTMLCalendar
 from webapp.models import Events
-import locale
 
 
 class Calendar(HTMLCalendar):
@@ -56,7 +55,7 @@ class Calendar(HTMLCalendar):
         return f'<tr>{week}</tr>'
 
     def formatmonth(self, withyear=True):
-        self.setfirstweekday(0)  # Set Monday as the first day of the week
+        self.setfirstweekday(0)
         events = Events.objects.filter(events_at__year=self.year, events_at__month=self.month)
         cal = f'<table border="0" cellpadding="0" cellspacing="0" class="calendar">\n'
         cal += f'<tr><th colspan="7" class="month">{self.RUSSIAN_MONTH_NAMES[self.month]} {self.year}</th></tr>'
