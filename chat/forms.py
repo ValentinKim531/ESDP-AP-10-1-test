@@ -1,8 +1,6 @@
 from django import forms
-from django.forms.utils import flatatt
-from django.utils.html import format_html
-
-from .models import ChatRoom, Account
+from accounts.models import Account
+from chat.models import ChatRoom
 
 
 class GroupChatForm(forms.ModelForm):
@@ -33,3 +31,4 @@ class GroupChatForm(forms.ModelForm):
     class Meta:
         model = ChatRoom
         fields = ['name', 'description', 'avatar', 'users']
+

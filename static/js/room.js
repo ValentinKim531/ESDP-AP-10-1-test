@@ -1,6 +1,31 @@
+import { handleFileUpload } from './fileSharing.js';
+
 const roomId = JSON.parse(document.getElementById('room-id').textContent);
 const chatThread = document.querySelector('#chat-thread');
 const messageInput = document.querySelector('#chat-message-input');
+const picker = document.querySelector('#emoji-picker');
+const emojiButton = document.querySelector('#emoji-button');
+
+messageInput.addEventListener('click', function() {
+    picker.style.display = 'none';
+});
+
+emojiButton.addEventListener('click', () => {
+    if (picker.style.display === 'none') {
+        const messageInputField = document.querySelector('.chat-message');
+        const boundingRect = messageInputField.getBoundingClientRect();
+        picker.style.left = `${boundingRect.left}px`;
+        picker.style.bottom = `${window.innerHeight - boundingRect.top}px`;
+        picker.style.display = 'block';
+    } else {
+        picker.style.display = 'none';
+    }
+});
+
+picker.addEventListener('emoji-click', event => {
+    const messageInputDom = document.querySelector('#chat-message-input');
+    messageInputDom.value += event.detail.emoji.unicode;
+});
 
 const centrifuge = new Centrifuge("ws://" + window.location.host + "/connection/websocket");
 centrifuge.on('connect', function (ctx) {
@@ -35,8 +60,25 @@ const sub = centrifuge.subscribe(channelName, function (ctx) {
 
     const chatMessageContent = document.createElement('div');
     chatMessageContent.classList.add('message-content');
-    const chatNewMessage = document.createTextNode(ctx.data.message);
-    chatMessageContent.appendChild(chatNewMessage);
+
+    if (ctx.data.fileMessage) {
+        if (ctx.data.isImage) {
+            const chatImage = document.createElement('img');
+            chatImage.src = ctx.data.fileUrl;
+            chatImage.alt = ctx.data.message;
+            chatImage.style.maxWidth = '300px';
+            chatMessageContent.appendChild(chatImage);
+        } else {
+            const chatFileLink = document.createElement('a');
+            chatFileLink.href = ctx.data.fileUrl;
+            chatFileLink.target = '_blank';
+            chatFileLink.textContent = ctx.data.message;
+            chatMessageContent.appendChild(chatFileLink);
+        }
+    } else {
+        const chatNewMessage = document.createTextNode(ctx.data.message);
+        chatMessageContent.appendChild(chatNewMessage);
+    }
 
     chatMessageBody.appendChild(chatUserName);
     chatMessageBody.appendChild(chatMessageContent);
@@ -75,5 +117,31 @@ messageInput.onkeyup = function (e) {
         });
 
         messageInput.value = '';
+        picker.style.display = 'none';
     }
 };
+
+const sendButton = document.querySelector('#send-button');
+
+sendButton.addEventListener('click', function() {
+    const message = messageInput.value;
+    if (!message) {
+        return;
+    }
+
+    sub.publish({
+        'message': message,
+        'user': userEmail,
+        'timestamp': new Date().toISOString(),
+        'userFirstName': userFirstName,
+        'userLastName': userLastName,
+        'avatarUrl': userAvatarUrl
+    });
+
+    messageInput.value = '';
+    picker.style.display = 'none';
+});
+
+const fileInput = document.querySelector('#chat-file-input');
+
+handleFileUpload(fileInput, centrifuge, roomId, userEmail, userFirstName, userLastName, userAvatarUrl);
