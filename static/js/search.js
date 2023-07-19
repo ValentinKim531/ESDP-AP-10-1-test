@@ -1,5 +1,5 @@
 let search = $('#id_search');
-let url = 'http://localhost:9000/json-accounts/?search=';
+let url = '/json-accounts/?search=';
 
 let addAccount = function (account, container){
     let div = document.createElement('div');

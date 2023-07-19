@@ -4,7 +4,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
-    fetch('http://localhost:8000/auth/login/', {
+    fetch('/auth/login/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

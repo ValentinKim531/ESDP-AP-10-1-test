@@ -1,5 +1,5 @@
 from django.urls import path
-from webapp.views.events import EventDetailView
+from webapp.views.events import EventDetailView, EventsBookedView, EventsBookedDeleteView
 from webapp.views.news import NewsCreateView, NewsDetail, NewsUpdateView, NewsDeleteView
 from webapp.views.index import index
 from webapp.views.newsline import NewslineView
@@ -16,5 +16,7 @@ urlpatterns = [
     path('accounts/', ProfileListView.as_view(), name='account_list'),
     path('accounts/<int:pk>/', ProfileDetailView.as_view(), name='account_detail'),
     path('events/<int:pk>/', EventDetailView.as_view(), name='events_detail'),
+    path('events_booked/<int:pk>', EventsBookedView.as_view(), name='events_booked'),
+    path('events_booked_delete/<int:pk>', EventsBookedDeleteView.as_view(), name='events_booked_delete'),
     path('json-accounts/', json_accounts, name='json_accounts'),
 ]

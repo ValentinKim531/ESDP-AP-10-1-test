@@ -1,8 +1,10 @@
-from django.shortcuts import redirect
-from django.views.generic import DetailView, CreateView, UpdateView
+from datetime import datetime
+from django.db.models import Q
+from django.shortcuts import redirect, get_object_or_404
+from django.views.generic import DetailView, CreateView, UpdateView, TemplateView
 
 from webapp.forms import EventsForm
-from webapp.models import Events
+from webapp.models import Events, UserBooked
 
 
 class EventDetailView(DetailView):
@@ -16,7 +18,13 @@ class EventDetailView(DetailView):
         booked_seats = self.object.resident_booked.count()
         available_seats = total_seats - booked_seats
         context['available_seats'] = available_seats
+        context['events_booked'] = False
+        if self.request.user in self.object.resident_booked.all():
+            context['events_booked'] = True
+        print(context['events_booked'])
         return context
+
+
 
 
 class EventsCreateView(CreateView):
@@ -40,3 +48,26 @@ class EventsUpdateView(UpdateView):
     model = Events
     form_class = EventsForm
     success_url = '/newsline'
+
+
+class EventsBookedView(TemplateView):
+    template_name = 'newsline.html'
+
+    def get(self, request, *args, **kwargs):
+        user = request.user
+        event = get_object_or_404(Events, pk=kwargs.get("pk"))
+        UserBooked.objects.create(resident=user, event=event, booking_date=datetime.now())
+        return redirect('newsline')
+
+
+class EventsBookedDeleteView(TemplateView):
+    template_name = 'event_detail.html'
+
+    def get(self, request, *args, **kwargs):
+        user = request.user
+        event = get_object_or_404(Events, pk=kwargs.get("pk"))
+        events_booked = UserBooked.objects.filter(resident=user, event=event)
+        events_booked.delete()
+        return redirect('newsline')
+
+

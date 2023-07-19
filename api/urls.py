@@ -1,7 +1,7 @@
 from django.urls import path
 
 from api.views.attaching_to_block_api_view import AttachingToBlockSimpleView, AttachingToBlockApiView
-from api.views.events_api_view import EventsSimpleView, EventApiView
+from api.views.events_api_view import EventsSimpleView, EventApiView, EventsBookedSimpleView
 from api.views.like_api_view import UserLikeView
 from accounts.views.auth import CheckAuthView
 from api.views.list_votes import ListVotesSimpleView, ListVotesApiView
@@ -50,4 +50,5 @@ urlpatterns = [
     path('request/<int:pk>', AdminRequestDetailApiView.as_view(), name="request_detail"),
     path('user_like/<int:id>', UserLikeView.as_view(), name='user_like'),
     path('check_auth/', CheckAuthView.as_view(), name='check_auth'),
+    path('evets_booked/', EventsBookedSimpleView.as_view(), name='evets_booked'),
 ]

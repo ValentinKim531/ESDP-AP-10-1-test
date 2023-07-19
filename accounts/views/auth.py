@@ -40,8 +40,11 @@ class LoginUserView(APIView):
             'user_id': user.id,
         }
         response = Response(res, status=status.HTTP_200_OK)
-        response.set_cookie(key='jwt', value=str(refresh.access_token), httponly=True, secure=False)
-        response.set_cookie(key='refresh_jwt', value=str(refresh), httponly=True, secure=False)
+
+        domain = request.get_host().split(":")[0]
+        response.set_cookie(key='jwt', value=str(refresh.access_token), httponly=True, secure=False, domain=domain)
+        response.set_cookie(key='refresh_jwt', value=str(refresh), httponly=True, secure=False, domain=domain)
+
         return response
 
     def get(self, request):

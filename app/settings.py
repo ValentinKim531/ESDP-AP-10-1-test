@@ -26,9 +26,17 @@ SECRET_KEY = "django-insecure-lss*=@=5ojk2@wy_!gwto+fl_-_gxgd=zupkn0a$8c2%z2(sbd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'app']
-CSRF_TRUSTED_ORIGINS = ['http://localhost:9000', 'https://localhost:9000']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'app', '138.68.78.122']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:9000', 'http://127.0.0.1:9000', 'http://138.68.78.122:9000']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:9000",
+    "http://138.68.78.122:9000"
+]
 
 # Application definition
 
@@ -65,15 +73,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # "debug_toolbar.middleware.DebugToolbarMiddleware",
-]
-
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:9000",
-    "http://127.0.0.1:8000"
 ]
 
 ROOT_URLCONF = "app.urls"
