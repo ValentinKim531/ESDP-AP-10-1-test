@@ -18,9 +18,10 @@ class EventDetailView(DetailView):
         booked_seats = self.object.resident_booked.count()
         available_seats = total_seats - booked_seats
         context['available_seats'] = available_seats
-        query = Q(Q(event=self.object.pk))
-        events_booked = UserBooked.objects.filter(query).first()
-        context['events_booked'] = events_booked
+        context['events_booked'] = False
+        if self.request.user in self.object.resident_booked.all():
+            context['events_booked'] = True
+        print(context['events_booked'])
         return context
 
 
@@ -65,8 +66,7 @@ class EventsBookedDeleteView(TemplateView):
     def get(self, request, *args, **kwargs):
         user = request.user
         event = get_object_or_404(Events, pk=kwargs.get("pk"))
-        query = Q(resident=user) | Q(event=event)
-        events_booked = UserBooked.objects.filter(query).first()
+        events_booked = UserBooked.objects.filter(resident=user, event=event)
         events_booked.delete()
         return redirect('newsline')
 

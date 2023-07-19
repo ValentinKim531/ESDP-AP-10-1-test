@@ -29,7 +29,7 @@
                         свободно из {{ event.number_of_seats }}</p>
                 </div>
                 {%if available_seats != 0 %}
-                {%if request.user != events_booked.resident %}
+                {%if not events_booked %}
                 <a href="{% url 'events_booked' event.pk %}" class="thank_profile_link">
                     <div class="profile_card_button_wrapper">
                     <span class="profile_card_button">
@@ -39,7 +39,7 @@
                 </a>
                 {% endif %}
                 {% endif %}
-                {%if request.user == events_booked.resident %}
+                {%if events_booked %}
                 <a href="{% url 'events_booked_delete' event.pk %}" class="thank_profile_link">
                     <div class="profile_card_button_wrapper">
                     <span class="profile_card_button">
@@ -48,6 +48,7 @@
                     </div>
                 </a>
                 {% endif %}
+
             </div>
         </div>
     </div>
