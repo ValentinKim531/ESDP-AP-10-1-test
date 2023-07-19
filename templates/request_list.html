@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Request List{% endblock %}
+{% block content %}
+<div class="request_list">
+    <h1>Запросы</h1>
+    <form action="{% url 'request_list' %}" method="get">
+        <p><select size="3" name="filter">
+            <option disabled>Выберите список запросов</option>
+            <option value="chat_request">Запросы на создание чата</option>
+            <option selected value="sub_level">Запросы на продление подписки</option>
+            <option value="other_request">Остальные запросы</option>
+            <option value="all_request">Все запросы</option>
+        </select></p>
+        <p><input type="submit" value="Отправить"></p>
+    </form>
+    {% for request in requests %}
+    <div class="request">
+        {% if request.sub_level %}
+        <p>Sub request</p>
+        {% elif request.chat_request %}
+        <p>Chat request</p>
+        {% else %}
+        <p>Request</p>
+        {% endif %}
+        <div class="request_user_sender">
+            <a href="{% url 'account_detail' request.user_sender.pk %}">
+                {% if not request.user_sender.avatar %}
+                <img src="{% static 'svg/user.png' %}" alt="Avatar" class="sender_user_pic">
+                {% else %}
+                <img src="{{ request.user_sender.avatar.url }}" alt="" class="sender_user_pic">
+                {% endif %}
+                {{ request.user_sender.first_name }} {{ request.user_sender.last_name }}
+            </a>
+        </div>
+        <div class="request_text"><a href="{% url 'request_detail' request.pk %}">
+            <p>{{ request.request_text|truncatechars_html:60 }}</p>
+        </a></div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

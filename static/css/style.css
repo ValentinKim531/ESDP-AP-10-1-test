@@ -411,3 +411,27 @@ ul {
 .event_card_description_div {
     width: 217px;
 }
+
+.request_list {
+    padding: 50px 15px;
+}
+.request{
+    border: solid black 2px;
+    margin: 10px 0;
+}
+.request p{
+    margin: 5px 5px;
+}
+.sender_user_pic{
+    width: 20px;
+    height: 20px;
+}
+.request_user_sender{
+
+}
+.request_detail{
+    padding: 50px 15px;
+}
+.user_booked{
+    border: solid black 2px;
+}
