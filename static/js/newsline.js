@@ -1,5 +1,5 @@
 $.ajax({
-    url: 'http://127.0.0.1:8000/api/newsline/',
+    url: '/api/newsline/',
     method: 'GET',
     success: function(data, status) {
     const newsline = document.getElementById('newsline');
