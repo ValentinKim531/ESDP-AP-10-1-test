@@ -16,9 +16,11 @@
             <a class="btn btn-info calendar_button_custom" href="{% url 'calendar' %}?{{ next_month }}">Следующий
                 месяц</a>
         </div>
+        {% if request.user.role == 'admin' %}
         <div class="calendar_new_event_button">
             <a class="btn btn-info calendar_button_custom" href="{% url 'event_new' %}">Новое событие</a>
         </div>
+        {% endif %}
         <div class="events-today">
             <h2 class="events_for_today">События на сегодня</h2>
             {% for event in events_today %}
@@ -30,7 +32,7 @@
                     </div>
                 </a>
             {% empty %}
-                <p>No events for today.</p>
+                <p class="no_events_for_today">No events for today.</p>
             {% endfor %}
         </div>
         <div class="calendar-header">

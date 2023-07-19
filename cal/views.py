@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta, date
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 
 from django.views import generic
 from django.urls import reverse
@@ -60,3 +60,13 @@ def event(request, event_id=None):
         return HttpResponseRedirect(reverse('calendar'))
 
     return render(request, 'event_create.html', {'form': form})
+
+
+def get_events(request):
+    date = request.GET.get('date')
+    events = []
+    events_all = Events.objects.all().filter(events_at__day=date).exclude(is_deleted=True)
+    for event in events_all:
+        single_event = {'name': event.name, 'url': f'events/{event.pk}'}
+        events.append(single_event)
+    return JsonResponse(events, safe=False)
