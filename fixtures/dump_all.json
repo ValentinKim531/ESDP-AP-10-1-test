@@ -1,347 +1,3724 @@
 [
 {
-    "model": "accounts.role",
-    "pk": 1,
-    "fields": {
-        "name": "Участник",
-        "privileges": [
-            1
-        ]
-    }
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-05-25T08:41:52.852Z",
+    "user": 20,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "Almaty",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.familystatus",
-    "pk": 1,
-    "fields": {
-        "name": "Женат"
-    }
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-05-25T08:41:57.650Z",
+    "user": 20,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Astana",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.familystatus",
-    "pk": 2,
-    "fields": {
-        "name": "Не женат"
-    }
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-05-25T08:46:41.756Z",
+    "user": 20,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "вебинар",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.account",
-    "pk": 20,
-    "fields": {
-        "password": "pbkdf2_sha256$600000$oFES0ajRw3LR8mgNJUT4bO$6iB3nhGSlvSL1foLaxftT+/cABRBcrw3D+YtksQBc0A=",
-        "last_login": "2023-07-03T13:37:20.732Z",
-        "is_superuser": true,
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2023-05-25T08:39:07Z",
-        "username": "root",
-        "first_name": "root",
-        "last_name": "root",
-        "middle_name": "root",
-        "birth_date": "1982-06-14",
-        "about_me": "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop",
-        "occupation": "Letraset sheets containing Lorem",
-        "cities": 1,
-        "status": null,
-        "created_at": "2023-05-25T08:39:07.484Z",
-        "updated_at": "2023-06-14T09:59:39.227Z",
-        "family_status": 1,
-        "first_visit_app": true,
-        "likes_qty": 10,
-        "avatar": 9,
-        "role": null,
-        "email": "root@root.com",
-        "phone": "+77778887744",
-        "industries": "финансы",
-        "companies": "ТОО Финанс",
-        "expertise": "лизинг, рцб, крипта",
-        "resources_available": "деньги",
-        "resources_searching": "франчайзинг",
-        "achievements": "похудел на 20 кг за 1 год",
-        "goal_for_the_year": "набрать 20 кг за 6 мес",
-        "request": "единомышленники",
-        "hobby": "спорт, рыбалка, путешествия",
-        "education": "КИМЭП",
-        "children": "3 года",
-        "facts_about_me": "мастер спорта по карате",
-        "site": "finance.kz",
-        "social_links": "instagram.com/123234234",
-        "groups": [],
-        "user_permissions": []
-    }
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-05-25T08:46:50.431Z",
+    "user": 20,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "бизнес-завтрак",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.account",
-    "pk": 21,
-    "fields": {
-        "password": "1234",
-        "last_login": null,
-        "is_superuser": false,
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2023-05-25T08:57:58Z",
-        "username": "user",
-        "first_name": "User",
-        "last_name": "User",
-        "middle_name": "User",
-        "birth_date": "2023-05-25",
-        "about_me": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        "occupation": "Гостиничный бизнес",
-        "cities": 1,
-        "status": null,
-        "created_at": "2023-05-25T09:01:32.836Z",
-        "updated_at": "2023-06-14T07:12:14.592Z",
-        "family_status": 1,
-        "first_visit_app": true,
-        "likes_qty": 3,
-        "avatar": 4,
-        "role": null,
-        "email": "user@user.com",
-        "phone": "87778889977",
-        "industries": "B2B услуги и товары народного потребления",
-        "companies": "ТОО Акжол, ТОО Изумруд",
-        "expertise": "Франчайзинг, налоги",
-        "resources_available": "Коммерческие помещения в г. Алматы",
-        "resources_searching": "Инвестора для расширения бизнеса",
-        "achievements": "Отец троих детей",
-        "goal_for_the_year": "Достичь оборота компаний в 1 млрд. тенге",
-        "request": "Мира",
-        "hobby": "Покер, футбол",
-        "education": "Нархоз, МГУ",
-        "children": "3, 5  и 7 лет",
-        "facts_about_me": "Победитель городского турнира по футзалу в г. Алматы, 2015 г.",
-        "site": "www.akzhol.kz",
-        "social_links": "https://www.instagram.com/123456, https://m.facebook.com/654987",
-        "groups": [],
-        "user_permissions": [
-            48
-        ]
-    }
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-05-25T08:47:08.863Z",
+    "user": 20,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "конференция",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.account",
-    "pk": 22,
-    "fields": {
-        "password": "user2",
-        "last_login": null,
-        "is_superuser": false,
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2023-06-14T09:29:10Z",
-        "username": "user2",
-        "first_name": "Аскаров",
-        "last_name": "Аскар",
-        "middle_name": "Аскарович",
-        "birth_date": "1990-06-05",
-        "about_me": "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
-        "occupation": "Letraset sheets containing",
-        "cities": 2,
-        "status": null,
-        "created_at": "2023-06-14T09:36:48.659Z",
-        "updated_at": "2023-06-14T09:36:48.659Z",
-        "family_status": 1,
-        "first_visit_app": true,
-        "likes_qty": 5,
-        "avatar": 5,
-        "role": null,
-        "email": "user2@mail.com",
-        "phone": "+79896666666",
-        "industries": "Животноводство",
-        "companies": "АО Коктем",
-        "expertise": "животноводство",
-        "resources_available": "земли с/х назначения, скот",
-        "resources_searching": "растеневодство",
-        "achievements": "Медаль за достижения в области животноводства",
-        "goal_for_the_year": "в два раза увеличить количество рогатого скота",
-        "request": "запрос",
-        "hobby": "биллиард, нарды",
-        "education": "КБТУ",
-        "children": "3 и 5 лет",
-        "facts_about_me": "мастер спорта по биллиарду",
-        "site": "animals.kz",
-        "social_links": "instagram.com/1231232342",
-        "groups": [],
-        "user_permissions": []
-    }
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-05-25T08:47:27.677Z",
+    "user": 20,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "форум",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.account",
-    "pk": 23,
-    "fields": {
-        "password": "user3",
-        "last_login": null,
-        "is_superuser": false,
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2023-06-14T09:36:50Z",
-        "username": "user3",
-        "first_name": "Омаров",
-        "last_name": "Омар",
-        "middle_name": "Омарович",
-        "birth_date": "1985-06-14",
-        "about_me": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections",
-        "occupation": "reproduced below for those interested. Sections",
-        "cities": 2,
-        "status": null,
-        "created_at": "2023-06-14T09:42:33.324Z",
-        "updated_at": "2023-06-14T09:42:33.324Z",
-        "family_status": 2,
-        "first_visit_app": true,
-        "likes_qty": 8,
-        "avatar": 6,
-        "role": null,
-        "email": "user3@mail.com",
-        "phone": "+77776669988",
-        "industries": "Горно-металлургический комплекс",
-        "companies": "АО Гранит",
-        "expertise": "металлургия, гос.органы",
-        "resources_available": "металлы",
-        "resources_searching": "специалисты по IT",
-        "achievements": "финишер марафона Нью-Йорк, 2020 г.",
-        "goal_for_the_year": "жениться",
-        "request": null,
-        "hobby": "бег, плавание",
-        "education": "КАЗГУ",
-        "children": "нет",
-        "facts_about_me": "выпускник Болашак",
-        "site": "steel.kz",
-        "social_links": "facebook.com/123123124",
-        "groups": [],
-        "user_permissions": []
-    }
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-05-25T08:49:23.530Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Event SAP Discovery Day Almaty 2023 - started 2023-05-30 08:47:45+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.account",
-    "pk": 24,
-    "fields": {
-        "password": "user4",
-        "last_login": null,
-        "is_superuser": false,
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2023-06-14T09:42:36Z",
-        "username": "user4",
-        "first_name": "Усманов",
-        "last_name": "Марат",
-        "middle_name": "Усманович",
-        "birth_date": "2000-06-14",
-        "about_me": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-        "occupation": "consectetur, adipisci velit...",
-        "cities": 1,
-        "status": null,
-        "created_at": "2023-06-14T09:48:29.708Z",
-        "updated_at": "2023-06-14T09:48:29.708Z",
-        "family_status": 2,
-        "first_visit_app": true,
-        "likes_qty": 3,
-        "avatar": 7,
-        "role": null,
-        "email": "user4@mail.com",
-        "phone": "+77757777777",
-        "industries": "Туризм",
-        "companies": "ТОО Едемвтур",
-        "expertise": "путешествия",
-        "resources_available": "услуги туроператора",
-        "resources_searching": "сотрудничество с корп.клиентами",
-        "achievements": "вершина Эльбрус",
-        "goal_for_the_year": "базовый лагерь Эверест",
-        "request": null,
-        "hobby": "горы, путешествия",
-        "education": "КЗГЮИ",
-        "children": "нет",
-        "facts_about_me": "побывал в 78 странах",
-        "site": "edemvtur.kz",
-        "social_links": "instagram.com/234234234",
-        "groups": [],
-        "user_permissions": []
-    }
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-05-25T08:52:08.061Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Event Премия HR-бренд Центральная Азия - started 2023-06-10 09:50:47+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.account",
-    "pk": 25,
-    "fields": {
-        "password": "user5",
-        "last_login": null,
-        "is_superuser": false,
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2023-06-14T09:48:34Z",
-        "username": "user5",
-        "first_name": "Иванов",
-        "last_name": "Иван",
-        "middle_name": "Иванович",
-        "birth_date": "1990-06-14",
-        "about_me": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search",
-        "occupation": "Lorem Ipsum as their default",
-        "cities": 1,
-        "status": null,
-        "created_at": "2023-06-14T09:54:42.598Z",
-        "updated_at": "2023-06-14T09:54:42.598Z",
-        "family_status": 1,
-        "first_visit_app": true,
-        "likes_qty": 7,
-        "avatar": 8,
-        "role": null,
-        "email": "user5@mail.com",
-        "phone": "+77012225588",
-        "industries": "Строительство",
-        "companies": "ТОО Курылыс",
-        "expertise": "строительство, сэндвич-панель технологии",
-        "resources_available": "древесина, цемент, щебень",
-        "resources_searching": "земля в Астане",
-        "achievements": "Осуществил проведение 20 выставок",
-        "goal_for_the_year": "пройти курсы дайвинга",
-        "request": "найти единомышленников",
-        "hobby": "собаки, баскетбол, охота",
-        "education": "МГУ",
-        "children": "7 и 10 лет",
-        "facts_about_me": "некоторые факты",
-        "site": "сайт.kz",
-        "social_links": "instagram.com/1231231231",
-        "groups": [],
-        "user_permissions": []
-    }
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-05-25T08:53:54.489Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Event Азиатско-Европейский Форум - started 2023-06-16 08:52:44+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.review",
-    "pk": 1,
-    "fields": {
-        "user_write_review": 20,
-        "user_receive_review": 21,
-        "text": "Lorem ipsum dolor sit amet. Quo iure libero et quia assumenda ea enim nulla id officiis ipsum ut praesentium quisquam ut omnis saepe eos ipsa debitis. Ut autem odio non consequuntur magnam ex quam quia et provident magnam sed nihil voluptatem et modi exercitationem et iste harum. Et eius sint qui voluptas temporibus et rerum quam.",
-        "like": true,
-        "created_at": "2023-06-01T12:07:55.006Z",
-        "updated_at": "2023-06-01T12:07:55.006Z"
-    }
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-05-25T08:55:06.017Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Фотография root - 2023-05-25 08:55:06.015055+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.review",
-    "pk": 2,
-    "fields": {
-        "user_write_review": 20,
-        "user_receive_review": 21,
-        "text": "Ut autem odio non consequuntur magnam ex quam quia et provident magnam sed nihil voluptatem et modi exercitationem et iste harum. Et eius sint qui voluptas temporibus et rerum quam.",
-        "like": true,
-        "created_at": "2023-06-01T12:08:39.653Z",
-        "updated_at": "2023-06-01T12:08:39.653Z"
-    }
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-05-25T08:55:09.741Z",
+    "user": 20,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "SAP Discovery Day Almaty 2023 - 1 июня 2023 года в отеле Ритц-Карлтон, Алматы, Казахстан, состоится крупнейшее IT-событие для бизнеса в Казахстане — SAP Discovery Day Almaty 2023. Мероприятие соберет ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.review",
-    "pk": 3,
-    "fields": {
-        "user_write_review": 21,
-        "user_receive_review": 20,
-        "text": "Et eius sint qui voluptas temporibus et rerum quam.",
-        "like": false,
-        "created_at": "2023-06-01T12:09:05.439Z",
-        "updated_at": "2023-06-01T12:09:05.439Z"
-    }
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-05-25T08:56:01.363Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Фотография root - 2023-05-25 08:56:01.361507+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "accounts.privileges",
-    "pk": 1,
-    "fields": {
-        "name": "Привилегированный пользователь"
-    }
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-05-25T08:56:21.617Z",
+    "user": 20,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "100% увеличение международной столичной выставки пищепрома в Казахстане - В Астане вот уже в 23-й раз распахнёт свои двери Казахстанская международная выставка по пищевой промышленности InterFood Asta",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-05-25T08:57:47.717Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Фотография root - 2023-05-25 08:57:47.714865+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-05-25T08:57:50.581Z",
+    "user": 20,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "инновационные и социально-значимые проекты на форуме Business WIRE Forum - В рамках Программы Shell LiveWIRE завершился форум для казахстанских предпринимателей Business WIRE Forum\r\nЕБРР и Шелл Казахс",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-05-25T09:01:15.077Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Фотография root - 2023-05-25 09:01:15.075206+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-05-25T09:01:32.848Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "21",
+    "object_repr": "user",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-06-01T12:07:55.010Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "Отзыв от root к профилю : User",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-06-01T12:08:39.655Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "Отзыв от root к профилю : User",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-06-01T12:09:05.441Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "Отзыв от user к профилю : None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-06-08T06:12:05.898Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Фотография root - 2023-05-25 09:01:15.075206+00:00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2023-06-08T06:20:12.368Z",
+    "user": 20,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Женат",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2023-06-08T06:20:21.371Z",
+    "user": 20,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "Не женат",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2023-06-08T06:20:40.102Z",
+    "user": 20,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Женат",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2023-06-08T06:20:45.877Z",
+    "user": 20,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Не женат",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2023-06-08T06:20:54.426Z",
+    "user": 20,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "Не женат",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2023-06-08T06:20:54.429Z",
+    "user": 20,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Женат",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2023-06-08T06:24:56.356Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Фотография user - 2023-05-25 09:01:15.075206+00:00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2023-06-08T06:33:13.316Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "21",
+    "object_repr": "user",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u0420\\u043e\\u0434 \\u0434\\u0435\\u044f\\u0442\\u0435\\u043b\\u044c\\u043d\\u043e\\u0441\\u0442\\u0438\", \"\\u0421\\u0435\\u043c\\u0435\\u0439\\u043d\\u044b\\u0439 \\u0441\\u0442\\u0430\\u0442\\u0443\\u0441\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e \\u043b\\u0430\\u0439\\u043a\\u043e\\u0432\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2023-06-08T06:50:32.247Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Фотография root - 2023-05-25 09:01:15.075206+00:00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2023-06-08T10:29:56.124Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "21",
+    "object_repr": "user",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2023-06-08T13:41:47.677Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Фотография root - 2023-05-25 09:01:15.075206+00:00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2023-06-14T07:12:14.600Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "21",
+    "object_repr": "user",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0442\\u0440\\u0430\\u0441\\u043b\\u0438\", \"\\u041a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0438\", \"\\u042d\\u043a\\u0441\\u043f\\u0435\\u0440\\u0442\\u0438\\u0437\\u0430\", \"\\u0420\\u0435\\u0441\\u0443\\u0440\\u0441\\u044b \\u0438\\u043c\\u0435\\u044e\\u0449\\u0438\\u0435\\u0441\\u044f\", \"\\u0420\\u0435\\u0441\\u0443\\u0440\\u0441\\u044b \\u0437\\u0430\\u043f\\u0440\\u0430\\u0448\\u0438\\u0432\\u0430\\u0435\\u043c\\u044b\\u0435\", \"\\u0414\\u043e\\u0441\\u0442\\u0438\\u0436\\u0435\\u043d\\u0438\\u044f\", \"\\u0426\\u0435\\u043b\\u044c \\u043d\\u0430 \\u0433\\u043e\\u0434\", \"\\u0417\\u0430\\u043f\\u0440\\u043e\\u0441\", \"\\u0425\\u043e\\u0431\\u0431\\u0438\", \"\\u041e\\u0431\\u0440\\u0430\\u0437\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u0414\\u0435\\u0442\\u0438\", \"\\u0424\\u0430\\u043a\\u0442\\u044b \\u043e\\u0431\\u043e \\u043c\\u043d\\u0435\", \"\\u0421\\u0430\\u0439\\u0442\", \"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0438 \\u043d\\u0430 \\u0441\\u043e\\u0446\\u0438\\u0430\\u043b\\u044c\\u043d\\u044b\\u0435 \\u0441\\u0435\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2023-06-14T09:32:11.077Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Фотография root - 2023-06-14 09:32:11.068482+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2023-06-14T09:36:48.677Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "22",
+    "object_repr": "user2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2023-06-14T09:38:40.363Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Фотография root - 2023-06-14 09:38:40.362292+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2023-06-14T09:42:33.335Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "23",
+    "object_repr": "user3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2023-06-14T09:44:23.365Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Фотография root - 2023-06-14 09:44:23.363975+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2023-06-14T09:48:29.722Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "24",
+    "object_repr": "user4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2023-06-14T09:49:43.126Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Фотография root - 2023-06-14 09:49:43.124314+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2023-06-14T09:54:42.608Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "25",
+    "object_repr": "user5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2023-06-14T09:56:00.514Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Фотография root - 2023-06-14 09:56:00.511908+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2023-06-14T09:59:39.233Z",
+    "user": 20,
+    "content_type": 12,
+    "object_id": "20",
+    "object_repr": "root",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\", \"\\u0414\\u0430\\u0442\\u0430 \\u0440\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u044f\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u0420\\u043e\\u0434 \\u0434\\u0435\\u044f\\u0442\\u0435\\u043b\\u044c\\u043d\\u043e\\u0441\\u0442\\u0438\", \"\\u0413\\u043e\\u0440\\u043e\\u0434\", \"\\u0421\\u0435\\u043c\\u0435\\u0439\\u043d\\u044b\\u0439 \\u0441\\u0442\\u0430\\u0442\\u0443\\u0441\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e \\u043b\\u0430\\u0439\\u043a\\u043e\\u0432\", \"\\u0410\\u0432\\u0430\\u0442\\u0430\\u0440\", \"\\u041d\\u043e\\u043c\\u0435\\u0440 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0430\", \"\\u041e\\u0442\\u0440\\u0430\\u0441\\u043b\\u0438\", \"\\u041a\\u043e\\u043c\\u043f\\u0430\\u043d\\u0438\\u0438\", \"\\u042d\\u043a\\u0441\\u043f\\u0435\\u0440\\u0442\\u0438\\u0437\\u0430\", \"\\u0420\\u0435\\u0441\\u0443\\u0440\\u0441\\u044b \\u0438\\u043c\\u0435\\u044e\\u0449\\u0438\\u0435\\u0441\\u044f\", \"\\u0420\\u0435\\u0441\\u0443\\u0440\\u0441\\u044b \\u0437\\u0430\\u043f\\u0440\\u0430\\u0448\\u0438\\u0432\\u0430\\u0435\\u043c\\u044b\\u0435\", \"\\u0414\\u043e\\u0441\\u0442\\u0438\\u0436\\u0435\\u043d\\u0438\\u044f\", \"\\u0426\\u0435\\u043b\\u044c \\u043d\\u0430 \\u0433\\u043e\\u0434\", \"\\u0417\\u0430\\u043f\\u0440\\u043e\\u0441\", \"\\u0425\\u043e\\u0431\\u0431\\u0438\", \"\\u041e\\u0431\\u0440\\u0430\\u0437\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u0414\\u0435\\u0442\\u0438\", \"\\u0424\\u0430\\u043a\\u0442\\u044b \\u043e\\u0431\\u043e \\u043c\\u043d\\u0435\", \"\\u0421\\u0430\\u0439\\u0442\", \"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0438 \\u043d\\u0430 \\u0441\\u043e\\u0446\\u0438\\u0430\\u043b\\u044c\\u043d\\u044b\\u0435 \\u0441\\u0435\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2023-07-19T12:21:13.300Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "3",
+    "object_repr": "Отзыв от user к профилю : root",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2023-07-19T12:21:13.303Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "2",
+    "object_repr": "Отзыв от root к профилю : User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2023-07-19T12:21:13.304Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "1",
+    "object_repr": "Отзыв от root к профилю : User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2023-07-19T12:21:24.076Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "21",
+    "object_repr": "user@user.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2023-07-19T12:21:24.081Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "22",
+    "object_repr": "user2@mail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2023-07-19T12:21:24.083Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "25",
+    "object_repr": "user5@mail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2023-07-19T12:21:24.085Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "23",
+    "object_repr": "user3@mail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2023-07-19T12:21:24.087Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "24",
+    "object_repr": "user4@mail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2023-07-19T12:32:22.577Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Фотография root@root.com - 2023-07-19 12:32:22.574160+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2023-07-19T12:38:28.248Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "26",
+    "object_repr": "nurlan@mail.com",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2023-07-19T12:39:47.741Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Фотография root@root.com - 2023-07-19 12:39:47.737733+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2023-07-19T12:44:08.264Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "27",
+    "object_repr": "daniyar@mail.com",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2023-07-19T12:45:20.290Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Фотография root@root.com - 2023-07-19 12:45:20.287838+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2023-07-19T12:48:40.468Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "28",
+    "object_repr": "ivan@mail.ru",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2023-07-19T12:50:04.658Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Фотография root@root.com - 2023-07-19 12:50:04.656801+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2023-07-19T12:54:31.383Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "29",
+    "object_repr": "alibek@mail.com",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2023-07-19T12:55:48.266Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Фотография root@root.com - 2023-07-19 12:55:48.264654+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2023-07-19T13:02:02.249Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "30",
+    "object_repr": "alikhan@mail.com",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2023-07-19T13:03:30.912Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:03:30.910185+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2023-07-19T13:08:11.739Z",
+    "user": 20,
+    "content_type": 22,
+    "object_id": "31",
+    "object_repr": "valentin@mail.ru",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2023-07-19T13:28:19.490Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "инновационные и социально-значимые проекты на форуме Business WIRE Forum - В рамках Программы Shell LiveWIRE завершился форум для казахстанских предпринимателей Business WIRE Forum\r\nЕБРР и Шелл Казахс",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2023-07-19T13:28:19.498Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "100% увеличение международной столичной выставки пищепрома в Казахстане - В Астане вот уже в 23-й раз распахнёт свои двери Казахстанская международная выставка по пищевой промышленности InterFood Asta",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2023-07-19T13:28:19.499Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "SAP Discovery Day Almaty 2023 - 1 июня 2023 года в отеле Ритц-Карлтон, Алматы, Казахстан, состоится крупнейшее IT-событие для бизнеса в Казахстане — SAP Discovery Day Almaty 2023. Мероприятие соберет ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2023-07-19T13:30:00.168Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:30:00.166202+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2023-07-19T13:30:12.455Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "В Алматы открылся клуб молодых предпринимателей - Об открытии клуба предпринимателей и о других возможностях для молодежи на площадке Региональной службы коммуникаций города Алматы рассказали руководи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2023-07-19T13:32:16.419Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:32:16.416629+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2023-07-19T13:32:17.794Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "5",
+    "object_repr": "СОТРУДНИЧЕСТВО БУДЕТ ВЗАИМОВЫГОДНЫМ - Национальные компании заинтересованы в сотрудничестве с местными производителями.\r\n\r\nУвеличение доли казахстанского содержания при закупке товаров, работ, услуг и",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2023-07-19T13:39:25.764Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:39:25.761287+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2023-07-19T13:39:27.677Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "6",
+    "object_repr": "Международный фестиваль Азия Дауысы возвращается - 3 дня живого звука, музыки, драйва, впечатлений, сюрпризов и подарков! И самый грандиозный хедлайнер мероприятия – BLACK EYED PEAS!\r\n\r\nВас ждет незаб",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2023-07-19T13:40:48.582Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Event Азиатско-Европейский Форум - started 2023-06-16 08:52:44+00:00",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2023-07-19T13:40:48.587Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Event Премия HR-бренд Центральная Азия - started 2023-06-10 09:50:47+00:00",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2023-07-19T13:40:48.589Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Event SAP Discovery Day Almaty 2023 - started 2023-05-30 08:47:45+00:00",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2023-07-19T13:41:50.979Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "19",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:41:50.978004+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2023-07-19T13:41:53.974Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "7",
+    "object_repr": "Международная выставка декоративного, технического освещения и электротехники Interlight Central Asia - Мы рады объявить о запуске нового выставочного проекта в Казахстане – Interlight Central Asia, п",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2023-07-19T13:42:53.841Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:42:53.839592+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2023-07-19T13:42:56.338Z",
+    "user": 20,
+    "content_type": 17,
+    "object_id": "8",
+    "object_repr": "Болевые точки производственной логистики - Информационные системы для управления складской деятельностью и современные цифровые складские технологии позволяют не только повысить эффективность процессо",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2023-07-19T13:45:56.596Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:45:56.594538+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2023-07-19T13:47:43.183Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "22",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:47:43.181155+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2023-07-19T13:48:13.254Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Event Бизнес-форум Shanyraq - started 2023-08-19 19:00:00+06:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2023-07-19T13:51:22.139Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "23",
+    "object_repr": "Фотография root@root.com - 2023-07-19 13:51:22.135631+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2023-07-19T13:51:33.909Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Event Финтех без границ. Цифровая Евразия 2023 - started 2023-09-19 12:00:00+06:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2023-07-19T14:14:37.125Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "24",
+    "object_repr": "Фотография root@root.com - 2023-07-19 14:14:37.121834+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2023-07-19T14:14:39.140Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Event Бизнес-игра «Битва за ресурсы» - started 2023-08-15 19:55:05+06:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2023-07-19T14:17:55.347Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "25",
+    "object_repr": "Фотография root@root.com - 2023-07-19 14:17:55.343747+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2023-07-19T14:17:58.016Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Event Геймификация бизнес-процессов - started 2023-08-10 20:15:42+06:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2023-07-19T14:20:59.278Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "26",
+    "object_repr": "Фотография root@root.com - 2023-07-19 14:20:59.275712+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2023-07-19T14:21:10.380Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Event Регулярные разборы. Фокус на ключевом действии - started 2023-09-01 20:21:05+06:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2023-07-19T14:25:31.397Z",
+    "user": 20,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "Фотография root@root.com - 2023-07-19 14:25:31.395228+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2023-07-19T14:25:46.342Z",
+    "user": 20,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Event Data Center & Cloud Kazakhstan 2023 - started 2023-10-01 20:23:40+06:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2023-07-19T14:28:09.439Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "4",
+    "object_repr": "Отзыв от Alibek к профилю : Алибек",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2023-07-19T14:28:34.029Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "5",
+    "object_repr": "Отзыв от Alikhan к профилю : Ким",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2023-07-19T14:28:54.310Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "6",
+    "object_repr": "Отзыв от Valentin к профилю : Отеген",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2023-07-19T14:29:13.453Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "7",
+    "object_repr": "Отзыв от Daniyar к профилю : Бекет",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2023-07-19T14:29:32.520Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "8",
+    "object_repr": "Отзыв от Ivan к профилю : Сапыжан",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2023-07-19T14:29:53.227Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "9",
+    "object_repr": "Отзыв от Nurlan к профилю : Отеген",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2023-07-19T14:30:17.539Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "10",
+    "object_repr": "Отзыв от Daniyar к профилю : Бекет",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2023-07-19T14:30:42.426Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "11",
+    "object_repr": "Отзыв от Alikhan к профилю : Ашихин",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2023-07-19T14:31:09.074Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "12",
+    "object_repr": "Отзыв от Ivan к профилю : Бекет",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2023-07-19T14:31:38.467Z",
+    "user": 20,
+    "content_type": 27,
+    "object_id": "13",
+    "object_repr": "Отзыв от Nurlan к профилю : Отеген",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add cities",
+    "content_type": 6,
+    "codename": "add_cities"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change cities",
+    "content_type": 6,
+    "codename": "change_cities"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete cities",
+    "content_type": 6,
+    "codename": "delete_cities"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view cities",
+    "content_type": 6,
+    "codename": "view_cities"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add events",
+    "content_type": 7,
+    "codename": "add_events"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change events",
+    "content_type": 7,
+    "codename": "change_events"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete events",
+    "content_type": 7,
+    "codename": "delete_events"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view events",
+    "content_type": 7,
+    "codename": "view_events"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add image",
+    "content_type": 8,
+    "codename": "add_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change image",
+    "content_type": 8,
+    "codename": "change_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete image",
+    "content_type": 8,
+    "codename": "delete_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view image",
+    "content_type": 8,
+    "codename": "view_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add type events",
+    "content_type": 9,
+    "codename": "add_typeevents"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change type events",
+    "content_type": 9,
+    "codename": "change_typeevents"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete type events",
+    "content_type": 9,
+    "codename": "delete_typeevents"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view type events",
+    "content_type": 9,
+    "codename": "view_typeevents"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add user booked",
+    "content_type": 10,
+    "codename": "add_userbooked"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change user booked",
+    "content_type": 10,
+    "codename": "change_userbooked"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete user booked",
+    "content_type": 10,
+    "codename": "delete_userbooked"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view user booked",
+    "content_type": 10,
+    "codename": "view_userbooked"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Новость",
+    "content_type": 11,
+    "codename": "add_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Новость",
+    "content_type": 11,
+    "codename": "change_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Новость",
+    "content_type": 11,
+    "codename": "delete_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Новость",
+    "content_type": 11,
+    "codename": "view_news"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Профиль",
+    "content_type": 12,
+    "codename": "add_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Профиль",
+    "content_type": 12,
+    "codename": "change_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Профиль",
+    "content_type": 12,
+    "codename": "delete_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Профиль",
+    "content_type": 12,
+    "codename": "view_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add family status",
+    "content_type": 13,
+    "codename": "add_familystatus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change family status",
+    "content_type": 13,
+    "codename": "change_familystatus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete family status",
+    "content_type": 13,
+    "codename": "delete_familystatus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view family status",
+    "content_type": 13,
+    "codename": "view_familystatus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add role",
+    "content_type": 14,
+    "codename": "add_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change role",
+    "content_type": 14,
+    "codename": "change_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete role",
+    "content_type": 14,
+    "codename": "delete_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view role",
+    "content_type": 14,
+    "codename": "view_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add status",
+    "content_type": 15,
+    "codename": "add_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change status",
+    "content_type": 15,
+    "codename": "change_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete status",
+    "content_type": 15,
+    "codename": "delete_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view status",
+    "content_type": 15,
+    "codename": "view_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add register admin user",
+    "content_type": 16,
+    "codename": "add_registeradminuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change register admin user",
+    "content_type": 16,
+    "codename": "change_registeradminuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete register admin user",
+    "content_type": 16,
+    "codename": "delete_registeradminuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view register admin user",
+    "content_type": 16,
+    "codename": "view_registeradminuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add Отзыв",
+    "content_type": 17,
+    "codename": "add_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change Отзыв",
+    "content_type": 17,
+    "codename": "change_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete Отзыв",
+    "content_type": 17,
+    "codename": "delete_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view Отзыв",
+    "content_type": 17,
+    "codename": "view_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add voting options",
+    "content_type": 18,
+    "codename": "add_votingoptions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change voting options",
+    "content_type": 18,
+    "codename": "change_votingoptions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete voting options",
+    "content_type": 18,
+    "codename": "delete_votingoptions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view voting options",
+    "content_type": 18,
+    "codename": "view_votingoptions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add list votes",
+    "content_type": 19,
+    "codename": "add_listvotes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change list votes",
+    "content_type": 19,
+    "codename": "change_listvotes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete list votes",
+    "content_type": 19,
+    "codename": "delete_listvotes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view list votes",
+    "content_type": 19,
+    "codename": "view_listvotes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add attaching to block",
+    "content_type": 20,
+    "codename": "add_attachingtoblock"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change attaching to block",
+    "content_type": 20,
+    "codename": "change_attachingtoblock"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete attaching to block",
+    "content_type": 20,
+    "codename": "delete_attachingtoblock"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view attaching to block",
+    "content_type": 20,
+    "codename": "view_attachingtoblock"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add vote",
+    "content_type": 21,
+    "codename": "add_vote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change vote",
+    "content_type": 21,
+    "codename": "change_vote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete vote",
+    "content_type": 21,
+    "codename": "delete_vote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view vote",
+    "content_type": 21,
+    "codename": "view_vote"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add name voting types",
+    "content_type": 22,
+    "codename": "add_namevotingtypes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change name voting types",
+    "content_type": 22,
+    "codename": "change_namevotingtypes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete name voting types",
+    "content_type": 22,
+    "codename": "delete_namevotingtypes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view name voting types",
+    "content_type": 22,
+    "codename": "view_namevotingtypes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add users who voted",
+    "content_type": 23,
+    "codename": "add_userswhovoted"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change users who voted",
+    "content_type": 23,
+    "codename": "change_userswhovoted"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete users who voted",
+    "content_type": 23,
+    "codename": "delete_userswhovoted"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view users who voted",
+    "content_type": 23,
+    "codename": "view_userswhovoted"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add voting types",
+    "content_type": 24,
+    "codename": "add_votingtypes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change voting types",
+    "content_type": 24,
+    "codename": "change_votingtypes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete voting types",
+    "content_type": 24,
+    "codename": "delete_votingtypes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view voting types",
+    "content_type": 24,
+    "codename": "view_votingtypes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can add status",
+    "content_type": 25,
+    "codename": "add_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can change status",
+    "content_type": 25,
+    "codename": "change_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can delete status",
+    "content_type": 25,
+    "codename": "delete_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can view status",
+    "content_type": 25,
+    "codename": "view_status"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 101,
+  "fields": {
+    "name": "Can add role",
+    "content_type": 26,
+    "codename": "add_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 102,
+  "fields": {
+    "name": "Can change role",
+    "content_type": 26,
+    "codename": "change_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 103,
+  "fields": {
+    "name": "Can delete role",
+    "content_type": 26,
+    "codename": "delete_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 104,
+  "fields": {
+    "name": "Can view role",
+    "content_type": 26,
+    "codename": "view_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 105,
+  "fields": {
+    "name": "Can add Отзыв",
+    "content_type": 27,
+    "codename": "add_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 106,
+  "fields": {
+    "name": "Can change Отзыв",
+    "content_type": 27,
+    "codename": "change_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 107,
+  "fields": {
+    "name": "Can delete Отзыв",
+    "content_type": 27,
+    "codename": "delete_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 108,
+  "fields": {
+    "name": "Can view Отзыв",
+    "content_type": 27,
+    "codename": "view_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 109,
+  "fields": {
+    "name": "Can add register admin user",
+    "content_type": 28,
+    "codename": "add_registeradminuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 110,
+  "fields": {
+    "name": "Can change register admin user",
+    "content_type": 28,
+    "codename": "change_registeradminuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 111,
+  "fields": {
+    "name": "Can delete register admin user",
+    "content_type": 28,
+    "codename": "delete_registeradminuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 112,
+  "fields": {
+    "name": "Can view register admin user",
+    "content_type": 28,
+    "codename": "view_registeradminuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 113,
+  "fields": {
+    "name": "Can add chat message",
+    "content_type": 29,
+    "codename": "add_chatmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 114,
+  "fields": {
+    "name": "Can change chat message",
+    "content_type": 29,
+    "codename": "change_chatmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 115,
+  "fields": {
+    "name": "Can delete chat message",
+    "content_type": 29,
+    "codename": "delete_chatmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 116,
+  "fields": {
+    "name": "Can view chat message",
+    "content_type": 29,
+    "codename": "view_chatmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 117,
+  "fields": {
+    "name": "Can add chat room",
+    "content_type": 30,
+    "codename": "add_chatroom"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 118,
+  "fields": {
+    "name": "Can change chat room",
+    "content_type": 30,
+    "codename": "change_chatroom"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 119,
+  "fields": {
+    "name": "Can delete chat room",
+    "content_type": 30,
+    "codename": "delete_chatroom"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 120,
+  "fields": {
+    "name": "Can view chat room",
+    "content_type": 30,
+    "codename": "view_chatroom"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 121,
+  "fields": {
+    "name": "Can add file",
+    "content_type": 31,
+    "codename": "add_file"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 122,
+  "fields": {
+    "name": "Can change file",
+    "content_type": 31,
+    "codename": "change_file"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 123,
+  "fields": {
+    "name": "Can delete file",
+    "content_type": 31,
+    "codename": "delete_file"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 124,
+  "fields": {
+    "name": "Can view file",
+    "content_type": 31,
+    "codename": "view_file"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 125,
+  "fields": {
+    "name": "Can add chat room membership",
+    "content_type": 32,
+    "codename": "add_chatroommembership"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 126,
+  "fields": {
+    "name": "Can change chat room membership",
+    "content_type": 32,
+    "codename": "change_chatroommembership"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 127,
+  "fields": {
+    "name": "Can delete chat room membership",
+    "content_type": 32,
+    "codename": "delete_chatroommembership"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 128,
+  "fields": {
+    "name": "Can view chat room membership",
+    "content_type": 32,
+    "codename": "view_chatroommembership"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "webapp",
+    "model": "cities"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "webapp",
+    "model": "events"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "webapp",
+    "model": "image"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "webapp",
+    "model": "namevotingtypes"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "webapp",
+    "model": "subscriptionlevel"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "webapp",
+    "model": "typeevents"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "webapp",
+    "model": "vote"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "webapp",
+    "model": "votingtypes"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "webapp",
+    "model": "votingoptions"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "webapp",
+    "model": "userswhovoted"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "webapp",
+    "model": "userbooked"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "webapp",
+    "model": "news"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "webapp",
+    "model": "listvotes"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "webapp",
+    "model": "chatrequest"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "webapp",
+    "model": "attachingtoblock"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "webapp",
+    "model": "adminrequest"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "accounts",
+    "model": "account"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "accounts",
+    "model": "familystatus"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "accounts",
+    "model": "privileges"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "accounts",
+    "model": "status"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 26,
+  "fields": {
+    "app_label": "accounts",
+    "model": "role"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 27,
+  "fields": {
+    "app_label": "accounts",
+    "model": "review"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 28,
+  "fields": {
+    "app_label": "accounts",
+    "model": "registeradminuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 29,
+  "fields": {
+    "app_label": "chat",
+    "model": "chatmessage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 30,
+  "fields": {
+    "app_label": "chat",
+    "model": "chatroom"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 31,
+  "fields": {
+    "app_label": "chat",
+    "model": "file"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 32,
+  "fields": {
+    "app_label": "chat",
+    "model": "chatroommembership"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "52o1tojvioigfbszk9o5w0d7y8kq9zci",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pCBQmFcuu8ZGmCmUjWQlHZlvLtt0oVu33v_v8UYtjWPW-NlnElchQZx-YUxpCeXw9AjlHuVqZZ1maM8EnnaJodK_Lqd7d9BDi3vazUBKIREHiaHkXqb2MCElgwi2N4na5wjBbwDx4G1AtLYsY-gOkLx-QLy_jd-:1q26Wu:kMQ5IFCR8L_LgHDJ9pmQTn2huwL4y5-nrzwp2J4oT40",
+    "expire_date": "2023-06-08T08:41:04.135Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "54otpbjc99v64gnyi61tubi3di4pifn1",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pABWigu3XsGMsyAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hZnEWGsTpd4xIj1R3wnestyap1XWZo9wVedAur43T83K4fwcFe_nW1g-jiSYhKQDORo-GHHsLoBEIJ-eHmFTUmohRKfDJTpQ1OcM2R0Tx_gD9HThy:1q9KPT:6eUpCQ-FKFJe0pDXEAi0i3svH1-awlQNAWvQ3SJFxXk",
+    "expire_date": "2023-06-28T06:55:15.027Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "owxompaoi019jorqaw2yg7wxjbb0uxxk",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pCBQmFcuu8ZGmCmUjWQlHZlvLtt0oVu33v_v8UYtjWPW-NlnElchQZx-YUxpCeXw9AjlHuVqZZ1maM8EnnaJodK_Lqd7d9BDi3vazUBKIREHiaHkXqb2MCElgwi2N4na5wjBbwDx4G1AtLYsY-gOkLx-QLy_jd-:1q4h4J:uiD8xhz84-RGDlMXzH-XTWoKrrxkOMSoDB-wdPHqQ5U",
+    "expire_date": "2023-06-15T12:06:15.093Z"
+  }
+},
+{
+  "model": "webapp.cities",
+  "pk": 1,
+  "fields": {
+    "citi_name": "Almaty"
+  }
+},
+{
+  "model": "webapp.cities",
+  "pk": 2,
+  "fields": {
+    "citi_name": "Astana"
+  }
+},
+{
+  "model": "webapp.typeevents",
+  "pk": 1,
+  "fields": {
+    "events_name": "вебинар"
+  }
+},
+{
+  "model": "webapp.typeevents",
+  "pk": 2,
+  "fields": {
+    "events_name": "бизнес-завтрак"
+  }
+},
+{
+  "model": "webapp.typeevents",
+  "pk": 3,
+  "fields": {
+    "events_name": "конференция"
+  }
+},
+{
+  "model": "webapp.typeevents",
+  "pk": 4,
+  "fields": {
+    "events_name": "форум"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 1,
+  "fields": {
+    "image": "user_pic/road.jpg",
+    "user": 20,
+    "created_at": "2023-05-25T08:55:06.015Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 2,
+  "fields": {
+    "image": "user_pic/river.jpeg",
+    "user": 20,
+    "created_at": "2023-05-25T08:56:01.361Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 3,
+  "fields": {
+    "image": "user_pic/relax.jpg",
+    "user": 20,
+    "created_at": "2023-05-25T08:57:47.714Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 4,
+  "fields": {
+    "image": "user_pic/default_user_pic_Ox7jpwu.jpeg",
+    "user": 20,
+    "created_at": "2023-05-25T09:01:15.075Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 5,
+  "fields": {
+    "image": "user_pic/avatar1.jpg",
+    "user": 20,
+    "created_at": "2023-06-14T09:32:11.068Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 6,
+  "fields": {
+    "image": "user_pic/user-profile-avatar.jpg",
+    "user": 20,
+    "created_at": "2023-06-14T09:38:40.362Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 7,
+  "fields": {
+    "image": "user_pic/user-profile-avatar2.jpg",
+    "user": 20,
+    "created_at": "2023-06-14T09:44:23.363Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 8,
+  "fields": {
+    "image": "user_pic/avatar3.jpg",
+    "user": 20,
+    "created_at": "2023-06-14T09:49:43.124Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 9,
+  "fields": {
+    "image": "user_pic/user-profile-avatar_Qgu5oG3.jpg",
+    "user": 20,
+    "created_at": "2023-06-14T09:56:00.511Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 10,
+  "fields": {
+    "image": "user_pic/Nurlan.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T12:32:22.574Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 11,
+  "fields": {
+    "image": "user_pic/Daniyar.jpeg",
+    "user": 20,
+    "created_at": "2023-07-19T12:39:47.737Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 12,
+  "fields": {
+    "image": "user_pic/Ivan.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T12:45:20.287Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 13,
+  "fields": {
+    "image": "user_pic/Alibek.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T12:50:04.656Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 14,
+  "fields": {
+    "image": "user_pic/Alikhan.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T12:55:48.264Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 15,
+  "fields": {
+    "image": "user_pic/Valentin.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T13:03:30.910Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 16,
+  "fields": {
+    "image": "user_pic/клуб_молодых_предпр.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T13:30:00.166Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 17,
+  "fields": {
+    "image": "user_pic/auto_news.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T13:32:16.416Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 18,
+  "fields": {
+    "image": "user_pic/азия_даусы.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T13:39:25.761Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 19,
+  "fields": {
+    "image": "user_pic/interlight.jpeg",
+    "user": 20,
+    "created_at": "2023-07-19T13:41:50.978Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 20,
+  "fields": {
+    "image": "user_pic/transportnaja_logistika.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T13:42:53.839Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 21,
+  "fields": {
+    "image": "user_pic/shanyrak.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T13:45:56.594Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 22,
+  "fields": {
+    "image": "user_pic/shanyrak_HbbJZja.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T13:47:43.181Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 23,
+  "fields": {
+    "image": "user_pic/мфца.png",
+    "user": 20,
+    "created_at": "2023-07-19T13:51:22.135Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 24,
+  "fields": {
+    "image": "user_pic/pexels-jeshootscom-1040157-335x220.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T14:14:37.121Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 25,
+  "fields": {
+    "image": "user_pic/cover.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T14:17:55.343Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 26,
+  "fields": {
+    "image": "user_pic/фокус.jpg",
+    "user": 20,
+    "created_at": "2023-07-19T14:20:59.275Z"
+  }
+},
+{
+  "model": "webapp.image",
+  "pk": 27,
+  "fields": {
+    "image": "user_pic/цод.png",
+    "user": 20,
+    "created_at": "2023-07-19T14:25:31.395Z"
+  }
+},
+{
+  "model": "webapp.events",
+  "pk": 4,
+  "fields": {
+    "name": "Бизнес-форум Shanyraq",
+    "cities": 1,
+    "type_events": 4,
+    "events_at": "2023-08-19T13:00:00Z",
+    "sponsor": 20,
+    "number_of_seats": 100,
+    "start_register_at": "2023-07-20T03:00:00Z",
+    "end_register_at": "2023-08-18T13:00:00Z",
+    "description": "Shanyraq – это главное ежегодное, масштабное событие для всех, кто хочет воплотить в реалии свои мечты, выйти на новый уровень и раскрыть свой скрытый потенциал.\r\n\r\nИнформация о билетах:\r\n\r\nVIP:\r\n— брендированный блокнот, ручка, стикерпак, худи;\r\n— доп. учебные материалы;\r\n— обед и фотосессия со спикерами;\r\n— книга;\r\n— доступ к закрытому чату пакета VIP;\r\n— запись форума и презентации спикеров;\r\n— фотограф и видеограф.\r\n\r\nPREMIUM:\r\n— брендированный блокнот, ручка, стикерпак;\r\n— доступ к закрытому чату пакета Premium;\r\n— запись форума и презентации спикеров.",
+    "place": "Алматы",
+    "price": "10000.00",
+    "is_deleted": false,
+    "created_at": "2023-07-19T13:48:13.250Z",
+    "updated_at": "2023-07-19T13:48:13.250Z",
+    "photo": 22
+  }
+},
+{
+  "model": "webapp.events",
+  "pk": 5,
+  "fields": {
+    "name": "Финтех без границ. Цифровая Евразия 2023",
+    "cities": 2,
+    "type_events": 3,
+    "events_at": "2023-09-19T06:00:00Z",
+    "sponsor": 20,
+    "number_of_seats": 80,
+    "start_register_at": "2023-07-20T03:00:00Z",
+    "end_register_at": "2023-09-01T13:00:00Z",
+    "description": "Конференция посвящена современному состоянию и перспективам развития банкинга и платежной индустрии, финтеху и инновациям в ключевых странах Евразии, входящих в Евразийский экономический союз (ЕАЭС), Содружество Независимых Государств (СНГ), Шанхайская организация сотрудничества (ШОС) и др.",
+    "place": "МФЦА г. Астана",
+    "price": "15000.00",
+    "is_deleted": false,
+    "created_at": "2023-07-19T13:51:33.905Z",
+    "updated_at": "2023-07-19T13:51:33.905Z",
+    "photo": 23
+  }
+},
+{
+  "model": "webapp.events",
+  "pk": 6,
+  "fields": {
+    "name": "Бизнес-игра «Битва за ресурсы»",
+    "cities": 1,
+    "type_events": 2,
+    "events_at": "2023-08-15T13:55:05Z",
+    "sponsor": 20,
+    "number_of_seats": 30,
+    "start_register_at": "2023-07-25T13:55:16Z",
+    "end_register_at": "2023-08-05T13:55:26Z",
+    "description": "Бизнес-игра «Битва за ресурсы»: тестируем все тактики переговоров за 2 часа",
+    "place": "ресторан Акбарс",
+    "price": "15000.00",
+    "is_deleted": false,
+    "created_at": "2023-07-19T14:14:39.137Z",
+    "updated_at": "2023-07-19T14:14:39.137Z",
+    "photo": 24
+  }
+},
+{
+  "model": "webapp.events",
+  "pk": 7,
+  "fields": {
+    "name": "Геймификация бизнес-процессов",
+    "cities": 2,
+    "type_events": 2,
+    "events_at": "2023-08-10T14:15:42Z",
+    "sponsor": 20,
+    "number_of_seats": 30,
+    "start_register_at": "2023-07-28T14:17:00Z",
+    "end_register_at": "2023-08-05T14:17:07Z",
+    "description": "Геймификация бизнес-процессов: строим культуру, в которой сотруднику не все равно, миссия не пылится на полке, а делегирование не равно контролю",
+    "place": "Plaza",
+    "price": "7000.00",
+    "is_deleted": false,
+    "created_at": "2023-07-19T14:17:58.012Z",
+    "updated_at": "2023-07-19T14:17:58.012Z",
+    "photo": 25
+  }
+},
+{
+  "model": "webapp.events",
+  "pk": 8,
+  "fields": {
+    "name": "Регулярные разборы. Фокус на ключевом действии",
+    "cities": 1,
+    "type_events": 1,
+    "events_at": "2023-09-01T14:21:05Z",
+    "sponsor": 20,
+    "number_of_seats": 50,
+    "start_register_at": "2023-07-29T14:18:41Z",
+    "end_register_at": "2023-08-31T14:18:48Z",
+    "description": "Бизнес-супервизия. Расшиваем ограничения, оперативно решаем проблемы и кратно растем с помощью реформистов.",
+    "place": "Almaty Towers",
+    "price": "20000.00",
+    "is_deleted": false,
+    "created_at": "2023-07-19T14:21:10.377Z",
+    "updated_at": "2023-07-19T14:21:10.377Z",
+    "photo": 26
+  }
+},
+{
+  "model": "webapp.events",
+  "pk": 9,
+  "fields": {
+    "name": "Data Center & Cloud Kazakhstan 2023",
+    "cities": 1,
+    "type_events": 1,
+    "events_at": "2023-10-01T14:23:40Z",
+    "sponsor": 20,
+    "number_of_seats": 50,
+    "start_register_at": "2023-07-30T14:23:54Z",
+    "end_register_at": "2023-09-30T14:23:55Z",
+    "description": "Роль информационных и цифровых технологий в бизнесе и государственном управлении возрастает с каждым годом. Центры обработки данных (ЦОД) и облачные сервисы - ключевые элементы цифровой инфраструктуры. Их высокая надежность и устойчивость определяет функционирование как отдельных предприятий, так и экономики целых стран.",
+    "place": "БЦ Нурлы Тау",
+    "price": "6000.00",
+    "is_deleted": false,
+    "created_at": "2023-07-19T14:25:46.339Z",
+    "updated_at": "2023-07-19T14:25:46.339Z",
+    "photo": 27
+  }
+},
+{
+  "model": "webapp.news",
+  "pk": 4,
+  "fields": {
+    "name": "В Алматы открылся клуб молодых предпринимателей",
+    "user": 20,
+    "cities": 1,
+    "description": "Об открытии клуба предпринимателей и о других возможностях для молодежи на площадке Региональной службы коммуникаций города Алматы рассказали руководитель проекта «Клуб Предпринимателей» Темирлан Сали, представители Управления занятости и социальных программ города Алматы Куляш Адилбекова и АО «Аграрная кредитная корпорация» Нұрберген Танырбергенұлы, сообщает Vecher.kz.\r\n\r\nЦель проекта – создание и развитие устойчивого сообщества молодых предпринимателей, осуществляющих предпринимательскую деятельность в городе Алматы.",
+    "created_at": "2023-07-19T13:30:12.446Z",
+    "updated_at": "2023-07-19T13:30:12.446Z",
+    "is_deleted": false,
+    "photo": [
+      16
+    ]
+  }
+},
+{
+  "model": "webapp.news",
+  "pk": 5,
+  "fields": {
+    "name": "СОТРУДНИЧЕСТВО БУДЕТ ВЗАИМОВЫГОДНЫМ",
+    "user": 20,
+    "cities": 1,
+    "description": "Национальные компании заинтересованы в сотрудничестве с местными производителями.\r\n\r\nУвеличение доли казахстанского содержания при закупке товаров, работ, услуг и создание благоприятных условий отечественным товаропроизводителям. Эти и другие вопросы обсуждались на встрече представителей национальных компаний Казахстана с местной властью, представителями Палаты предпринимателей ВКО и бизнесменами региона.\r\n\r\nПо заверению национальных компаний, они готовы сотрудничать с местными производителями. К примеру, в 2014 году объем бюджета на закуп у «КазАтомПрома» составит 297 миллиардов тенге, «Қазақстан темір жолы» выделяет на эти цели 460 миллиардов тенге, а «Казахтелекома» - 86 миллиардов тенге. Это стабильный рынок сбыта, только необходимо более широко информировать о нем представителей сферы бизнеса, считают в Палате предпринимателей ВКО.\r\n\r\nДиректора филиалов Палаты, присутствовавшие на встрече, заявили о намерении оповещать о закупках национальных компаний предпринимателей  в районах в «ручном режиме». В целом, области есть что предложить. Это и автомобили «Азия Авто», продукция конденсаторного и арматурного заводов, шаровые краны «КазРосПромАрматуры», автомобильные стекла фирмы «Триплекс» и т.д.",
+    "created_at": "2023-07-19T13:32:17.787Z",
+    "updated_at": "2023-07-19T13:32:17.787Z",
+    "is_deleted": false,
+    "photo": [
+      17
+    ]
+  }
+},
+{
+  "model": "webapp.news",
+  "pk": 6,
+  "fields": {
+    "name": "Международный фестиваль Азия Дауысы возвращается",
+    "user": 20,
+    "cities": 1,
+    "description": "3 дня живого звука, музыки, драйва, впечатлений, сюрпризов и подарков! И самый грандиозный хедлайнер мероприятия – BLACK EYED PEAS!\r\n\r\nВас ждет незабываемое шоу от Will.I.Am, Taboo и apl.de.ap - известных всему миру своими исключительными хитами и завораживающими выступлениями на сцене и готовностью взорвать арену своей неистовой энергией и талантом.",
+    "created_at": "2023-07-19T13:39:27.671Z",
+    "updated_at": "2023-07-19T13:39:27.671Z",
+    "is_deleted": false,
+    "photo": [
+      18
+    ]
+  }
+},
+{
+  "model": "webapp.news",
+  "pk": 7,
+  "fields": {
+    "name": "Международная выставка декоративного, технического освещения и электротехники Interlight Central Asia",
+    "user": 20,
+    "cities": 2,
+    "description": "Мы рады объявить о запуске нового выставочного проекта в Казахстане – Interlight Central Asia, посвященного освещению и электротехнике. Мероприятие обещает стать ведущей площадкой для демонстрации передовых решений и новейших технологий в индустрии света в центрально-азиатском регионе.",
+    "created_at": "2023-07-19T13:41:53.967Z",
+    "updated_at": "2023-07-19T13:41:53.967Z",
+    "is_deleted": false,
+    "photo": [
+      19
+    ]
+  }
+},
+{
+  "model": "webapp.news",
+  "pk": 8,
+  "fields": {
+    "name": "Болевые точки производственной логистики",
+    "user": 20,
+    "cities": 1,
+    "description": "Информационные системы для управления складской деятельностью и современные цифровые складские технологии позволяют не только повысить эффективность процессов, но и минимизировать влияние на них человеческого фактора. О том, как можно сэкономить свыше 100 млн тенге в год, используя IT-технологии, рассказываем в этой статье. \r\n\r\nЧто не так в складской логистике?\r\n\r\nВ качестве примера мы будем рассматривать предприятие по производству цемента.\r\n\r\nПомимо сырья для производства продукции, на заводе хранятся: запчасти для ремонта оборудования, упаковка (мешки, паллеты, биг беги), а также материалы, сопровождающие производство. Что-то из ТМЦ хранится на центральном складе, что-то — на цеховом, а что-то — в кладовках.",
+    "created_at": "2023-07-19T13:42:56.330Z",
+    "updated_at": "2023-07-19T13:42:56.331Z",
+    "is_deleted": false,
+    "photo": [
+      20
+    ]
+  }
+},
+{
+  "model": "accounts.familystatus",
+  "pk": 1,
+  "fields": {
+    "name": "Женат"
+  }
+},
+{
+  "model": "accounts.familystatus",
+  "pk": 2,
+  "fields": {
+    "name": "Не женат"
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$oFES0ajRw3LR8mgNJUT4bO$6iB3nhGSlvSL1foLaxftT+/cABRBcrw3D+YtksQBc0A=",
+    "last_login": "2023-06-14T06:55:15Z",
+    "is_superuser": true,
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-05-25T08:39:07Z",
+    "username": "root",
+    "first_name": "root",
+    "last_name": "root",
+    "middle_name": "root",
+    "birth_date": "1982-06-14",
+    "about_me": "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop",
+    "occupation": "Letraset sheets containing Lorem",
+    "cities": 1,
+    "status": null,
+    "created_at": "2023-05-25T08:39:07.484Z",
+    "updated_at": "2023-06-14T09:59:39.227Z",
+    "family_status": 1,
+    "first_visit_app": true,
+    "likes_qty": 10,
+    "avatar": 9,
+    "role": null,
+    "email": "root@root.com",
+    "phone": "+77778887744",
+    "industries": "финансы",
+    "companies": "ТОО Финанс",
+    "expertise": "лизинг, рцб, крипта",
+    "resources_available": "деньги",
+    "resources_searching": "франчайзинг",
+    "achievements": "похудел на 20 кг за 1 год",
+    "goal_for_the_year": "набрать 20 кг за 6 мес",
+    "request": "единомышленники",
+    "hobby": "спорт, рыбалка, путешествия",
+    "education": "КИМЭП",
+    "children": "3 года",
+    "facts_about_me": "мастер спорта по карате",
+    "site": "finance.kz",
+    "social_links": "instagram.com/123234234",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": 26,
+  "fields": {
+    "password": "1234",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-19T12:22:02Z",
+    "username": "Nurlan",
+    "first_name": "Нурлан",
+    "last_name": "Сапыжан",
+    "middle_name": null,
+    "birth_date": "2000-01-01",
+    "about_me": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised.",
+    "occupation": "программист разработчик",
+    "cities": 1,
+    "status": null,
+    "created_at": "2023-07-19T12:38:28.234Z",
+    "updated_at": "2023-07-19T12:38:28.234Z",
+    "family_status": 2,
+    "first_visit_app": true,
+    "likes_qty": null,
+    "avatar": 10,
+    "role": null,
+    "email": "nurlan@mail.com",
+    "phone": "+77778889977",
+    "industries": "машиностроение",
+    "companies": "ТОО \"Авто-трейд\"",
+    "expertise": "машиностроение, китайский язык",
+    "resources_available": "коммерческая недвижимость",
+    "resources_searching": "земля",
+    "achievements": "№1 автосалон по г. Алматы",
+    "goal_for_the_year": "№1 по доле рынка продаж новых авто",
+    "request": "партнеры",
+    "hobby": "хайкинг",
+    "education": "Казахский университет международных отношений и мировых языков",
+    "children": null,
+    "facts_about_me": "владею китайским языком",
+    "site": "http://www.auto.kz",
+    "social_links": "https://www.instagram.com/nurlan/",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": 27,
+  "fields": {
+    "password": "1234",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-19T12:38:39Z",
+    "username": "Daniyar",
+    "first_name": "Данияр",
+    "last_name": "Отеген",
+    "middle_name": null,
+    "birth_date": "2001-01-01",
+    "about_me": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised",
+    "occupation": "лингвистика",
+    "cities": 2,
+    "status": null,
+    "created_at": "2023-07-19T12:44:08.253Z",
+    "updated_at": "2023-07-19T12:44:08.253Z",
+    "family_status": 2,
+    "first_visit_app": true,
+    "likes_qty": null,
+    "avatar": 11,
+    "role": null,
+    "email": "daniyar@mail.com",
+    "phone": "+77756665544",
+    "industries": "лингвистика",
+    "companies": "ТОО \"Лингво.\"",
+    "expertise": "английский язык",
+    "resources_available": "учебный центр",
+    "resources_searching": "опытные переводчики",
+    "achievements": "№1 в международном конкурсе лингвистов",
+    "goal_for_the_year": "учеба в Европе",
+    "request": "самопознание",
+    "hobby": "пейнтбол, футбол",
+    "education": "КБТУ",
+    "children": null,
+    "facts_about_me": "черный пояс по карате",
+    "site": "http://www.lingvo.kz",
+    "social_links": "https://www.instagram.com/daniyar/",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": 28,
+  "fields": {
+    "password": "1234",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-19T12:44:10Z",
+    "username": "Ivan",
+    "first_name": "Иван",
+    "last_name": "Ашихин",
+    "middle_name": null,
+    "birth_date": "1999-01-01",
+    "about_me": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
+    "occupation": "строительство",
+    "cities": 2,
+    "status": null,
+    "created_at": "2023-07-19T12:48:40.458Z",
+    "updated_at": "2023-07-19T12:48:40.458Z",
+    "family_status": 2,
+    "first_visit_app": true,
+    "likes_qty": null,
+    "avatar": 12,
+    "role": null,
+    "email": "ivan@mail.ru",
+    "phone": "+77012223377",
+    "industries": "строительство",
+    "companies": "ТОО \"Строй-инвест\"",
+    "expertise": "строительство и ремонт",
+    "resources_available": "здание БЦ в г. Алматы",
+    "resources_searching": "бизнес-партнерство",
+    "achievements": "№1 на рынке строительства БЦ",
+    "goal_for_the_year": "доля рынка стротельства 20% по г. Алматы",
+    "request": null,
+    "hobby": "биллиард",
+    "education": "КИМЕП",
+    "children": "1",
+    "facts_about_me": "покорил Эверест",
+    "site": "http://www.stroy.kz",
+    "social_links": "https://www.instagram.com/ivan/",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": 29,
+  "fields": {
+    "password": "1234",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-19T12:48:43Z",
+    "username": "Alibek",
+    "first_name": "Алибек",
+    "last_name": "Бекет",
+    "middle_name": null,
+    "birth_date": "2002-01-01",
+    "about_me": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "occupation": "разработка программного обеспечения",
+    "cities": 2,
+    "status": null,
+    "created_at": "2023-07-19T12:54:31.374Z",
+    "updated_at": "2023-07-19T12:54:31.374Z",
+    "family_status": null,
+    "first_visit_app": true,
+    "likes_qty": null,
+    "avatar": 13,
+    "role": null,
+    "email": "alibek@mail.com",
+    "phone": "+77755558899",
+    "industries": "IT software",
+    "companies": "ТОО \"Софт технолоджи\"",
+    "expertise": "Python",
+    "resources_available": "разработка ПО",
+    "resources_searching": "консалтинг",
+    "achievements": "успешный стартап проект 2020 г.",
+    "goal_for_the_year": "новый стартап проект",
+    "request": "ищу талантливых разработчиков",
+    "hobby": "эндуро байк спорт",
+    "education": "London Business school",
+    "children": "2",
+    "facts_about_me": "заработал первый миллион в 15 лет",
+    "site": "http://www.soft.kz",
+    "social_links": "https://www.instagram.com/alibek/",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": 30,
+  "fields": {
+    "password": "1234",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-19T12:54:33Z",
+    "username": "Alikhan",
+    "first_name": "Алихан",
+    "last_name": "Алибек",
+    "middle_name": null,
+    "birth_date": "2003-01-01",
+    "about_me": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+    "occupation": "инвестиции",
+    "cities": 1,
+    "status": null,
+    "created_at": "2023-07-19T13:02:02.239Z",
+    "updated_at": "2023-07-19T13:02:02.239Z",
+    "family_status": 2,
+    "first_visit_app": true,
+    "likes_qty": 2,
+    "avatar": 14,
+    "role": null,
+    "email": "alikhan@mail.com",
+    "phone": "+77774447744",
+    "industries": "инвестиции в ценные бумаги, IT стартапы",
+    "companies": "ТОО \"IT Invest\"",
+    "expertise": "рынок ценных бумаг, финансовый анализ",
+    "resources_available": "консалтинг",
+    "resources_searching": "стартапы",
+    "achievements": "Увеличение клиентской базы и рост продаж в 2 раза в 2022 году",
+    "goal_for_the_year": "Установить личный рекорд по прочитанным книгам",
+    "request": null,
+    "hobby": "баскетбол",
+    "education": "МФТИ",
+    "children": null,
+    "facts_about_me": "жил 5 лет в Нью-Йорке",
+    "site": "http://www.broker.kz",
+    "social_links": "https://www.instagram.com/alikhan/",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "pk": 31,
+  "fields": {
+    "password": "1234",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-19T13:02:11Z",
+    "username": "Valentin",
+    "first_name": "Валентин",
+    "last_name": "Ким",
+    "middle_name": null,
+    "birth_date": "1982-01-20",
+    "about_me": "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "occupation": "банковское дело",
+    "cities": 2,
+    "status": null,
+    "created_at": "2023-07-19T13:08:11.731Z",
+    "updated_at": "2023-07-19T13:08:11.731Z",
+    "family_status": 1,
+    "first_visit_app": true,
+    "likes_qty": 2,
+    "avatar": 15,
+    "role": null,
+    "email": "valentin@mail.ru",
+    "phone": "+77781115599",
+    "industries": "банки и финансы",
+    "companies": "ТОО \"Финанс\"",
+    "expertise": "кредитование, банковские продукты",
+    "resources_available": "консалтинг",
+    "resources_searching": "программирование",
+    "achievements": "Ironman Kazakhstan 2022",
+    "goal_for_the_year": "программист-разработчик python",
+    "request": "получение опыта в python разработке",
+    "hobby": "триатлон",
+    "education": "Нархоз",
+    "children": "2",
+    "facts_about_me": "похудел на 20 кг за 1 год",
+    "site": "http://www.bank.kz",
+    "social_links": "https://www.instagram.com/valentin/",
+    "is_deleted": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 4,
+  "fields": {
+    "user_write_review": 29,
+    "user_receive_review": 30,
+    "text": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections",
+    "like": true,
+    "created_at": "2023-07-19T14:28:09.436Z",
+    "updated_at": "2023-07-19T14:28:09.436Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 5,
+  "fields": {
+    "user_write_review": 30,
+    "user_receive_review": 31,
+    "text": "Lorem Ipsum as their default model text, and a search for 'lorem ipsum!!",
+    "like": true,
+    "created_at": "2023-07-19T14:28:34.025Z",
+    "updated_at": "2023-07-19T14:28:34.025Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 6,
+  "fields": {
+    "user_write_review": 31,
+    "user_receive_review": 27,
+    "text": "Many desktop publishing packages and web page editors now use",
+    "like": true,
+    "created_at": "2023-07-19T14:28:54.308Z",
+    "updated_at": "2023-07-19T14:28:54.308Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 7,
+  "fields": {
+    "user_write_review": 27,
+    "user_receive_review": 29,
+    "text": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..",
+    "like": true,
+    "created_at": "2023-07-19T14:29:13.449Z",
+    "updated_at": "2023-07-19T14:29:13.449Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 8,
+  "fields": {
+    "user_write_review": 28,
+    "user_receive_review": 26,
+    "text": "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero",
+    "like": true,
+    "created_at": "2023-07-19T14:29:32.508Z",
+    "updated_at": "2023-07-19T14:29:32.508Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 9,
+  "fields": {
+    "user_write_review": 26,
+    "user_receive_review": 27,
+    "text": "Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page.",
+    "like": true,
+    "created_at": "2023-07-19T14:29:53.225Z",
+    "updated_at": "2023-07-19T14:29:53.225Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 10,
+  "fields": {
+    "user_write_review": 27,
+    "user_receive_review": 29,
+    "text": "Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words",
+    "like": true,
+    "created_at": "2023-07-19T14:30:17.537Z",
+    "updated_at": "2023-07-19T14:30:17.537Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 11,
+  "fields": {
+    "user_write_review": 30,
+    "user_receive_review": 28,
+    "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "like": true,
+    "created_at": "2023-07-19T14:30:42.424Z",
+    "updated_at": "2023-07-19T14:30:42.424Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 12,
+  "fields": {
+    "user_write_review": 28,
+    "user_receive_review": 29,
+    "text": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution.",
+    "like": true,
+    "created_at": "2023-07-19T14:31:09.072Z",
+    "updated_at": "2023-07-19T14:31:09.072Z",
+    "is_deleted": false
+  }
+},
+{
+  "model": "accounts.review",
+  "pk": 13,
+  "fields": {
+    "user_write_review": 26,
+    "user_receive_review": 27,
+    "text": "Many desktop publishing packages and web page editors now use!!!",
+    "like": true,
+    "created_at": "2023-07-19T14:31:38.464Z",
+    "updated_at": "2023-07-19T14:31:38.464Z",
+    "is_deleted": false
+  }
 }
 ]
