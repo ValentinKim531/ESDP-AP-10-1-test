@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Room</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/chat.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/centrifugal/centrifuge-js@2.8.3/dist/centrifuge.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+</head>
+
+<body>
+{% if user.is_authenticated %}
+<input type="hidden" id="user-first-name" value="{{ user.first_name }}">
+<input type="hidden" id="user-last-name" value="{{ user.last_name }}">
+<input type="hidden" id="user-email" value="{{ user.email }}">
+<input type="hidden" id="user-avatar-url" value="{{ user.avatar.image.url }}">
+{% endif %}
+
+<nav>
+    <div class="navbar-container">
+        <a class="navbar-item" href="{% url 'chat_list' %}">
+            <button>Назад</button>
+        </a>
+        <div class="navbar-item navbar-profile">
+            {% if room.is_group_chat %}
+            <a href="{% url 'group_detail' room.id %}">
+                {{ room.name }}
+                {% if room.avatar %}
+                <img src="{{ room.avatar.url }}" alt="{{ room.name }}'s avatar" class="navbar-avatar">
+                {% else %}
+                <img src="/uploads/groupchats/default.png" alt="Group Avatar" class="navbar-avatar">
+                {% endif %}
+            </a>
+            {% else %}
+            {% if other_user.first_name and other_user.last_name %}
+            <a href="{% url 'account_detail' other_user.id %}">
+                {{ other_user.first_name }} {{ other_user.last_name }}
+                {% if other_user.avatar %}
+                <img src="{{ other_user.avatar.image.url }}"
+                     alt="{{ other_user.first_name }} {{ other_user.last_name }}'s avatar" class="navbar-avatar">
+                {% endif %}
+            </a>
+            {% else %}
+            <a href="{% url 'account_detail' other_user.id %}">
+                {{ other_user.email }}
+                {% if other_user.avatar %}
+                <img src="{{ other_user.avatar.image.url }}" alt="{{ other_user.email }}'s avatar"
+                     class="navbar-avatar">
+                {% endif %}
+            </a>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</nav>
+
+<ul id="chat-thread" class="chat-thread">
+    {% for message in old_messages %}
+    {% if message.user.email == request.user.email %}
+    <li class="current-user">
+        <div class="user-avatar" style="background-image: url({{ message.user.avatar.image.url }});"></div>
+        <div class="user-name">{{ message.user.first_name }} {{ message.user.last_name }}</div>
+        <div class="message-content">
+            {% if message.file_url %}
+            {% if message.is_image %}
+            <img src="{{ message.file_url }}" alt="{{ message.message }}" style="max-width: 300px;">
+            {% else %}
+            <a href="{{ message.file_url }}" target="_blank">{{ message.message }}</a>
+            {% endif %}
+            {% else %}
+            {{ message.message }}
+            {% endif %}
+        </div>
+        <div class="timestamp">{{ message.timestamp|date:"d.m.Y, H:i" }}</div>
+    </li>
+    {% else %}
+    <li class="other-user">
+        <div class="user-avatar" style="background-image: url({{ message.user.avatar.image.url }});"></div>
+        <div class="user-name">{{ message.user.first_name }} {{ message.user.last_name }}</div>
+        <div class="message-content">
+            {% if message.file_url %}
+            {% if message.is_image %}
+            <img src="{{ message.file_url }}" alt="{{ message.message }}" style="max-width: 300px;">
+            {% else %}
+            <a href="{{ message.file_url }}" target="_blank">{{ message.message }}</a>
+            {% endif %}
+            {% else %}
+            {{ message.message }}
+            {% endif %}
+        </div>
+        <div class="timestamp">{{ message.timestamp|date:"d.m.Y, H:i" }}</div>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+<div class="chat-message">
+    <label for="chat-file-input" class="chat-file-label">
+        <i class="fas fa-paperclip"></i>
+    </label>
+    <input id="chat-file-input" class="chat-file-input" type="file"/>
+    <input id="chat-message-input" class="chat-message-input" type="text" autocomplete="off" autofocus/>
+    <button id="emoji-button" class="emoji-button">🙂</button>
+    <button id="send-button" class="send-button"><i class="fas fa-arrow-right"></i></button>
+</div>
+<emoji-picker id="emoji-picker" style="display: none;"></emoji-picker>
+{{ room_uuid|json_script:"room-id" }}
+
+{% block extrajs %}
+<script type="module" src="{% static 'js/fileSharing.js' %}"></script>
+<script type="module" src="{% static 'js/room.js' %}"></script>
+{% endblock %}
+<script>
+window.onload = function() {
+    var chatThread = document.getElementById('chat-thread');
+    chatThread.scrollTop = chatThread.scrollHeight;
+};
+</script>
+</body>
+
+</html>

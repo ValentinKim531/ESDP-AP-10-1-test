@@ -8,6 +8,10 @@ class Role(models.Model):
         blank=False,
         verbose_name="Роль"
     )
+    privileges = models.ManyToManyField(
+        'Privileges',
+        verbose_name="Привилегии"
+    )
 
     def __str__(self):
         return self.name

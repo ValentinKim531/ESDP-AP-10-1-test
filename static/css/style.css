@@ -4,7 +4,9 @@
     height: 932px;
     background: #217995;
     margin: 0 0 0 400px;
+    overflow: hidden;
 }
+
 
 .header {
     position: absolute;
@@ -15,6 +17,7 @@
     background: #072A2B;
 }
 
+
 .hamburger_menu {
     position: absolute;
     width: 39.77px;
@@ -22,6 +25,7 @@
     left: 347px;
     top: 25px;
 }
+
 
 .titany_logo {
     position: absolute;
@@ -32,11 +36,13 @@
     border-radius: 34px;
 }
 
+
 .titany_logo_img {
     width: 118px;
     height: 104px;
     border-radius: 34px;
 }
+
 
 .navbar {
     position: absolute;
@@ -47,39 +53,46 @@
     background: #072A2B;
 }
 
+
 .menu {
     display: flex;
     justify-content: space-around;
 }
+
 
 .svg_img {
     height: 41px;
     width: 41px;
 }
 
+
 li {
     list-style-type: none;
 }
 
+
 ul {
     padding-inline-start: 0;
 }
+
 
 .svg_link {
     height: 41px;
     width: 41px;
 }
 
+
 .about_current_page {
-    position: absolute;
-    width: 400px;
+    display: flex;
+    width: 427px;
     height: 63px;
-    left: 13px;
-    top: 92px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
 }
 
+
 .newsline_header {
-    position: absolute;
     width: 427px;
     height: 58px;
     font-family: 'Playfair Display', serif;
@@ -91,21 +104,38 @@ ul {
     color: #FFFFFF;
 }
 
+
 .scrollable-container {
-    max-height: 710px;
+    max-height: 870px;
     overflow-y: auto;
-    padding-top: 150px;
 }
+
+
+.scrollable-container::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+
+.scrollable-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background-color: silver;
+}
+
 
 .user_card {
     background: #EEEEEE;
-    border: 3px solid #0A292C;
-    border-radius: 24px;
-    width: 350px;
-    height: 71px;
+    border: 2px solid #0A292C;
+    border-radius: 10px;
+    width: 390px;
+    height: 80px;
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
 }
+
 
 .user_pic {
     width: 46px;
@@ -113,16 +143,20 @@ ul {
     border-radius: 50px;
 }
 
+
 .block_profiles {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
 }
+
 
 .about_user {
     text-align: center;
     width: 70%;
 }
+
 
 .user_pic_div {
     width: 30%;
@@ -131,9 +165,11 @@ ul {
     align-items: center;
 }
 
+
 .about_user_name {
     height: 0;
 }
+
 
 .about_user_name {
     width: 236px;
@@ -145,11 +181,14 @@ ul {
     line-height: 21px;
     text-align: center;
     color: #000000;
+    margin-top: 15px;
 }
+
 
 .about_user_name_heading {
     margin-block-start: 0.5em;
 }
+
 
 .about_user_scope_heading {
     margin-block-start: 0.67em;
@@ -162,21 +201,26 @@ ul {
     color: #000000;
 }
 
+
 .about_user_scope {
     width: 238px;
     height: 17px;
 }
 
+
 .separator {
-    width: 80%;
+    width: 390px;
 }
+
 
 .user_card_link {
     width: 100%;
     height: 100%;
     display: flex;
     text-decoration: none;
+    color: white;
 }
+
 
 .profile_card_wrapper {
     display: flex;
@@ -184,15 +228,16 @@ ul {
     align-items: center;
 }
 
+
 .profile_card {
     width: 348px;
-    margin-top: 158px;
     height: 686px;
     background: #EEEEEE;
     border: 3px solid #0A292C;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 24px;
 }
+
 
 .profile_card_pic_div {
     display: flex;
@@ -201,16 +246,19 @@ ul {
     margin-top: 10px;
 }
 
+
 .profile_card_pic {
     width: 176px;
     height: 181px;
 }
+
 
 .profile_card_info_div {
     width: 264px;
     height: 404px;
     margin-left: 42px;
 }
+
 
 .profile_first_last_names {
     width: 264px;
@@ -225,17 +273,20 @@ ul {
     margin-block-end: 0;
 }
 
+
 .account_info_sm {
     margin-block-start: 0.7em;
     margin-block-end: 0.7em;
     font-style: italic;
 }
 
+
 .account_info_big {
     margin-block-start: 0.7em;
     margin-block-end: 0.7em;
     font-style: italic;
 }
+
 
 .profile_card_button_div {
     display: flex;
@@ -244,6 +295,7 @@ ul {
     margin-top: 20px;
     height: 41px;
 }
+
 
 .profile_card_button_wrapper {
     width: 275px;
@@ -257,6 +309,7 @@ ul {
     border-radius: 24px;
 }
 
+
 .profile_card_button {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
@@ -264,50 +317,58 @@ ul {
     padding-bottom: 5px;
 }
 
+
 .update_profile_link {
     text-decoration: none;
     color: white;
 }
+
 
 .thank_profile_link {
     text-decoration: none;
     color: white;
 }
 
+
 .profiles_card_info {
     overflow-y: scroll;
     max-height: 404px;
 }
 
+
 .profiles_card_info::-webkit-scrollbar {
     width: 0.5em;
 }
+
 
 .profiles_card_info::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
+
 .profiles_card_info::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 
+
 .events_div {
-    padding-top: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
 .event_card {
-    width: 348px;
+    width: 390px;
     height: 178px;
     background: #EEEEEE;
     border: 3px solid #0A292C;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-    margin-top: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
     display: flex;
 }
+
 
 .event_card_image {
     width: 60%;
@@ -316,22 +377,26 @@ ul {
     align-items: center;
 }
 
+
 .event_card_description {
     width: 100%;
 }
 
+
 .event_card_img {
     width: 110px;
     height: 110px;
-    border: 3px solid #0A292C;
-    border-radius: 24px;
+    border: 2px solid #0A292C;
+    border-radius: 3px;
 }
+
 
 .event_card_description_header_div {
     width: 146px;
     height: 35px;
     background: rgba(238, 238, 238, 0.933333);
 }
+
 
 .event_card_description_header {
     width: 200px;
@@ -347,6 +412,7 @@ ul {
     color: #000000;
 }
 
+
 .event_card_description {
     font-style: italic;
     font-weight: 400;
@@ -355,49 +421,54 @@ ul {
     color: #000000;
 }
 
-.wrapper {
-    overflow-y: scroll;
-    max-height: 675px;
-}
 
 .wrapper::-webkit-scrollbar {
     width: 0.5em;
 }
 
+
 .wrapper::-webkit-scrollbar-track {
     background-color: transparent;
 }
+
 
 .wrapper::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 
+
 .event_card_link {
     text-decoration: none;
 }
+
 
 .event_div {
     overflow-y: scroll;
     max-height: 286px;
 }
 
+
 .event_div::-webkit-scrollbar {
     width: 0.5em;
 }
+
 
 .event_div::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
+
 .event_div::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 
+
 .event_detail_card_pic {
-    border: 3px solid #0A292C;
+    border: 2px solid #0A292C;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
+    border-radius: 10px;
 }
+
 
 .event_detail_card_header {
     margin-block-end: 0;
@@ -408,9 +479,551 @@ ul {
     line-height: 37px;
 }
 
+
 .event_card_description_div {
     width: 217px;
 }
+
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 860px;
+    overflow-y: auto;
+}
+
+
+.calendar-header {
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+.calendar-wrapper {
+    background-color: #217995;
+    color: #fff;
+    padding: 20px;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.calendar-buttons {
+    display: flex;
+    justify-content: space-around;
+    order: 2;
+}
+
+
+.calendar-buttons a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+
+.btn-info {
+    background-color: #072A2B;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.calendar caption {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+
+.calendar th {
+    background-color: #217995;
+    color: #fff;
+    padding: 10px;
+}
+
+
+.calendar td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+
+.calendar .date {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.calendar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.calendar li {
+    margin-bottom: 5px;
+}
+
+
+.calendar li a {
+    color: #217995;
+    text-decoration: none;
+}
+
+
+.calendar li a:hover {
+    text-decoration: underline;
+}
+
+
+.event-list {
+    display: none;
+}
+
+
+.event-count {
+    display: block;
+    font-size: 18px;
+    color: orange;
+}
+
+
+.back_to_calendar_link {
+    margin-top: 100px;
+}
+
+
+.calendar_new_event_button {
+    display: flex;
+    justify-content: center;
+    order: 3;
+}
+
+
+.events-today {
+    order: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.newsline-header {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+
+.event_card_mini {
+    width: 390px;
+    height: 40px;
+    background: #EEEEEE;
+    border: 3px solid #0A292C;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.event_name_calendar {
+    color: black;
+}
+
+
+.event_card_mini_link {
+    text-decoration: none;
+}
+
+
+.calendar_button_custom {
+    background: #D37724;
+    border: 3px solid #0A292C;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+
+.calendar-container::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+
+.calendar-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+.calendar-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+.events_for_today {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin-block-end: 0;
+}
+
+
+.burger-button {
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    z-index: 9;
+    padding: 8px;
+}
+
+
+.burger-button span {
+    width: 40px;
+    border: 2px solid #D37724;
+    background-color: #D37724;
+    display: block;
+    border-radius: 22px;
+    transition: 0.3s;
+}
+
+
+.burger-button.active span {
+    border-color: #D37724;
+    background-color: #D37724;
+}
+
+
+.burger-top, .burger-bottom {
+    position: absolute;
+}
+
+
+.burger-top {
+    top: -02px;
+}
+
+
+.burger-bottom {
+    bottom: -02px;
+}
+
+
+.burger-button.active .burger-top {
+    position: absolute;
+    top: 8px;
+    transform: rotateZ(45deg);
+}
+
+
+.burger-button.active .burger-middle {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.burger-button.active .burger-bottom {
+    position: absolute;
+    bottom: 8px;
+    transform: rotateZ(-45deg);
+}
+
+
+.burger-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #072A2B;
+    padding: 5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 8;
+    transition: 1s;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.burger-menu.active {
+    display: flex;
+    height: 850px;
+}
+
+
+.burger-menu a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 300;
+    color: #C3BFBC;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    display: block;
+    padding: 5px 15px;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+}
+
+
+.burger_menu_nav_custom {
+}
+
+
+.navi_admin {
+    margin-top: 300px;
+    margin-bottom: 50px;
+}
+
+
+.avatar-container {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+
+.avatar-image {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.create_chat_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.chat_card {
+    width: 348px;
+    height: 505px;
+    background: #EEEEEE;
+    border: 3px solid #0A292C;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.update_chat_link {
+    text-decoration: none;
+    color: white;
+}
+
+
+.chat_admin {
+    color: white;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.chat_users {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+
+.about_user_chat {
+    text-align: center;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about_user_name_heading_chat {
+    margin-block-start: 0;
+}
+
+
+.about_user_name_chat {
+    width: 236px;
+    height: 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    margin-top: 0;
+}
+
+
+.chat_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 670px;
+    justify-content: space-evenly;
+    padding: 0 6px;
+}
+
+
+.create_chat_button {
+    width: 275px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D37724;
+    border: 3px solid #0A292C;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+
+.chat_name_field {
+    border-radius: 6px;
+    height: 30px;
+}
+
+
+.chat_description_field {
+    border-radius: 10px;
+}
+
+
+.chat_name_field::placeholder {
+    text-align: center;
+}
+
+
+.chat_description_field::placeholder {
+    text-align: center;
+    padding-top: 70px;
+}
+
+
+form > p {
+    display: flex;
+    flex-direction: column;
+}
+
+  
+.log_form {
+    margin-top: 300px;
+    margin-left: 100px;
+}
+
+  
+.login_h {
+    height: 58px;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-right: 70px;
+}
+
+  
+.log_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Playfair Display", serif;
+
+}
+
+
+.profile_card_button_wrapper.log {
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 23px;
+}
+
+  
+.profile_card_button_login {
+    width: 250px;
+    height: 41px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+  
+.reg_form {
+    margin-top: 300px;
+    margin-left: 100px;
+}
+
+  
+.resident {
+    margin-top: 300px;
+
+}
+
+  
+.login_h.ind{
+    margin-left: 90px;
+    margin-bottom: 50px;
+}
+
+.ind_butt {
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat_avatar_label {
+    margin-top: 10px;
+}
+
 
 .request_list {
     padding: 50px 15px;

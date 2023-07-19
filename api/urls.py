@@ -1,8 +1,9 @@
 from django.urls import path
 
 from api.views.attaching_to_block_api_view import AttachingToBlockSimpleView, AttachingToBlockApiView
-from api.views.events_api_view import EventsSimpleView, EventApiView
+from api.views.events_api_view import EventsSimpleView, EventApiView, EventsBookedSimpleView
 from api.views.like_api_view import UserLikeView
+from accounts.views.auth import CheckAuthView
 from api.views.list_votes import ListVotesSimpleView, ListVotesApiView
 from api.views.name_voting_types_api_view import NameVotingTypesSSimpleView, NameVotingTypesSApiView
 from api.views.news_api_view import NewsSimpleView, NewsApiView
@@ -39,13 +40,15 @@ urlpatterns = [
     path("reviews/<int:pk>", ReviewApiView.as_view(), name="reviews_api"),
     path("newsline/", NewslineApiView.as_view(), name="newsline_api"),
     path("accounts/", AccountsSimpleView.as_view(), name="accounts_list"),
-    path('accounts/<int:pk>', AccountApiView.as_view(), name="events"),
-    path('chat_request/', ChatRequestApiView.as_view(), name="chat_request_api"),
-    path('sub_request/', SubscriptionLevelRequestApiView.as_view(), name="sub_request_api"),
-    path('sub_level/', SubscriptionLevelApiView.as_view(), name="sub_level_api"),
-    path('sub_level/<int:pk>', SubscriptionLevelDetailApiView.as_view(), name="sub_level_detail_api"),
-    path('request/', RequestApiView.as_view(), name="request_api"),
-    path('request_all/', AdminRequestListApiView.as_view(), name="request_all_api"),
-    path('request/<int:pk>', AdminRequestDetailApiView.as_view(), name="request_detail_api"),
-    path('user_like/<int:id>', UserLikeView.as_view(), name='user_like')
+    path('accounts/<int:pk>', AccountApiView.as_view(), name="accounts"),
+    path('chat_request/', ChatRequestApiView.as_view(), name="chat_request"),
+    path('sub_request/', SubscriptionLevelRequestApiView.as_view(), name="sub_request"),
+    path('sub_level/', SubscriptionLevelApiView.as_view(), name="sub_level"),
+    path('sub_level/<int:pk>', SubscriptionLevelDetailApiView.as_view(), name="sub_level_detail"),
+    path('request/', RequestApiView.as_view(), name="request"),
+    path('request_all/', AdminRequestListApiView.as_view(), name="request_all"),
+    path('request/<int:pk>', AdminRequestDetailApiView.as_view(), name="request_detail"),
+    path('user_like/<int:id>', UserLikeView.as_view(), name='user_like'),
+    path('check_auth/', CheckAuthView.as_view(), name='check_auth'),
+    path('evets_booked/', EventsBookedSimpleView.as_view(), name='evets_booked'),
 ]

@@ -1,5 +1,5 @@
 $.ajax({
-    url: 'http://127.0.0.1:8000/api/accounts/',
+    url: '/api/accounts/',
     method: 'GET',
     success: function(data, status) {
         const profile = document.getElementById('profile_list');

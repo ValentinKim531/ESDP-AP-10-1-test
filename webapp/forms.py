@@ -1,6 +1,38 @@
 from django import forms
-from .models import Events, AdminRequest, ChatRequest, SubscriptionLevel
+from webapp.models import Events, News, AdminRequest, ChatRequest, SubscriptionLevel
 from django.core.exceptions import ValidationError
+
+
+class NewsForm(forms.ModelForm):
+    class Meta:
+        model = News
+        fields = (
+            "name",
+            "user",
+            "cities",
+            "description",
+            "photo"
+        )
+
+        labels = {
+            "name": "Наименование новости",
+            "user": "Пользователь",
+            "cities": "Город",
+            "description": "Описание новости",
+            "photo": "Фото",
+        }
+
+    def clean_title(self):
+        name = self.cleaned_data.get("name")
+        if len(name) < 2:
+            raise ValidationError(
+                "Наименование должно быть длиннее 2 символов"
+            )
+        if News.objects.filter(name=name).exists():
+            raise ValidationError(
+                "Наименование с таким именем уже есть"
+            )
+        return name
 
 
 class EventsForm(forms.ModelForm):
@@ -99,3 +131,7 @@ class AdminRequestReviewerForm(forms.ModelForm):
         if len(response_text) < 3:
             raise ValidationError('Ответ на запрос должен состоять более чем из 3 символов обязательное поле')
         return response_text
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField(max_length=20, required=False, label="Найти")
