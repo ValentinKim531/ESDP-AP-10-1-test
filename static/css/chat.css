@@ -168,6 +168,25 @@ body {
     margin-left: 10px;
 }
 
+.send-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(25, 147, 147, 0.2);
+    color: #0AD5C1;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    border: none;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.send-button .fas {
+    font-size: 18px;
+}
+
 /* Навигационная панель */
 nav {
     width: 100%;

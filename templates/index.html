@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome!</title>
-</head>
-<body>
-    <h1>Добро пожаловать!</h1>
-    <button onclick="location.href='{% url 'login' %}'">Login</button>
-    <button onclick="location.href='{% url 'register' %}'">Register</button>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}User Registration{% endblock %}
+{% block content %}
+    <div class="resident">
+        <h1 class="login_h ind">ВЫ РЕЗИДЕНТ КЛУБА ?</h1>
+        <div class="ind_butt">
+            <div class="profile_card_button_wrapper log">
+                <span class="profile_card_button">
+                <button class="log_btn" onclick="location.href='{% url 'login' %}'">ДА</button>
+                </span>
+            </div>
+            <div class="profile_card_button_wrapper log">
+                <span class="profile_card_button">
+                <button class="log_btn" onclick="location.href='{% url 'register' %}'">НЕТ</button>
+                </span>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

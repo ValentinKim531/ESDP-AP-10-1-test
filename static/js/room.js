@@ -121,6 +121,27 @@ messageInput.onkeyup = function (e) {
     }
 };
 
+const sendButton = document.querySelector('#send-button');
+
+sendButton.addEventListener('click', function() {
+    const message = messageInput.value;
+    if (!message) {
+        return;
+    }
+
+    sub.publish({
+        'message': message,
+        'user': userEmail,
+        'timestamp': new Date().toISOString(),
+        'userFirstName': userFirstName,
+        'userLastName': userLastName,
+        'avatarUrl': userAvatarUrl
+    });
+
+    messageInput.value = '';
+    picker.style.display = 'none';
+});
+
 const fileInput = document.querySelector('#chat-file-input');
 
 handleFileUpload(fileInput, centrifuge, roomId, userEmail, userFirstName, userLastName, userAvatarUrl);

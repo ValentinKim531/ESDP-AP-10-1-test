@@ -1,5 +1,4 @@
 from django.urls import path
-
 from chat.views import StartChatView, RoomView, ChatsView, CreateGroupChatView, GroupDetailView, UpdateGroupChatView, \
     connect, subscribe, publish, upload_file
 
