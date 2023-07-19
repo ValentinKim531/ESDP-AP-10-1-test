@@ -3,7 +3,7 @@ from webapp.views.events import EventDetailView, EventsBookedView, EventsBookedD
 from webapp.views.news import NewsCreateView, NewsDetail, NewsUpdateView, NewsDeleteView
 from webapp.views.index import index
 from webapp.views.newsline import NewslineView
-from webapp.views.profile import ProfileListView, ProfileDetailView
+from webapp.views.profile import ProfileListView, ProfileDetailView, json_accounts
 
 urlpatterns = [
     path('', index, name='index'),
@@ -17,5 +17,6 @@ urlpatterns = [
     path('accounts/<int:pk>/', ProfileDetailView.as_view(), name='account_detail'),
     path('events/<int:pk>/', EventDetailView.as_view(), name='events_detail'),
     path('events_booked/<int:pk>', EventsBookedView.as_view(), name='events_booked'),
-    path('events_booked_delete/<int:pk>', EventsBookedDeleteView.as_view(), name='events_booked_delete')
+    path('events_booked_delete/<int:pk>', EventsBookedDeleteView.as_view(), name='events_booked_delete'),
+    path('json-accounts/', json_accounts, name='json_accounts'),
 ]
