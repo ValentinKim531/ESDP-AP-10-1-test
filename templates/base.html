@@ -1,4 +1,5 @@
 {% load static %}
+{% now "Y-m" as current_date %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +52,7 @@
                         </a>
                     </li>
                     <li class="svg">
-                        <a class="svg_link" href="{% url 'calendar' %}">
+                        <a class="svg_link" href="/calendar/?month={{ current_date }}">
                             <img style="width: 41px; height: 41px" src="{% static 'svg/events.png' %}"
                                  alt="Мероприятия"/>
                         </a>
