@@ -16,7 +16,9 @@
     <div class="header">
         <div class="container">
             <div class="titany_logo">
-                <img src="{% static 'svg/titany_logo.png' %}" alt="LOGO" class="titany_logo_img">
+                <a href="{% url 'newsline' %}" class="titany_logo_link">
+                    <img src="{% static 'svg/titany_logo.png' %}" alt="LOGO" class="titany_logo_img">
+                </a>
             </div>
             {% block header %}
             {% endblock %}
@@ -47,23 +49,23 @@
                 <ul class="menu">
                     <li class="svg">
                         <a class="svg_link" href="{% url 'newsline' %}">
-                            <img style="width: 41px; height: 41px" src="{% static 'svg/newsline.png' %}" alt="Новости"/>
+                            <img class="svg_img" src="{% static 'svg/newsline.png' %}" alt="Новости"/>
                         </a>
                     </li>
                     <li class="svg">
                         <a class="svg_link" href="{% url 'chat_list' %}">
-                            <img style="width: 41px; height: 41px" src="{% static 'svg/chat.png' %}" alt="Чаты"/>
+                            <img class="svg_img" src="{% static 'svg/chat.png' %}" alt="Чаты"/>
                         </a>
                     </li>
                     <li class="svg">
                         <a class="svg_link" href="/calendar/?month={{ current_date }}">
-                            <img style="width: 41px; height: 41px" src="{% static 'svg/events.png' %}"
+                            <img class="svg_img" src="{% static 'svg/events.png' %}"
                                  alt="Мероприятия"/>
                         </a>
                     </li>
                     <li class="svg">
                         <a class="svg_link" href="{% url 'account_list' %}">
-                            <img style="width: 41px; height: 41px" src="{% static 'svg/profile.png' %}"
+                            <img class="svg_img" src="{% static 'svg/profile.png' %}"
                                  alt="Резиденты"/>
                         </a>
                     </li>
