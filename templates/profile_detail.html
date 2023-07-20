@@ -11,10 +11,8 @@
                 <img src="{{ account.avatar.image.url }}" alt="Avatar" class="profile_card_pic">
             </div>
             <div class="profile_card_info_div">
-                <div class="profile_names">
-                    <p class="profile_first_last_names">{{ account.first_name }} {{ account.last_name }}</p>
-                </div>
                 <div class="profiles_card_info">
+                    <p class="profile_first_last_names">{{ account.first_name }} {{ account.last_name }}</p>
                     <p class="account_info_sm"><b>Город:</b> {{ account.cities }}</p>
                     <p class="account_info_big"><b>О резиденте:</b> {{ account.about_me }}</p>
                     <p class="account_info_sm"><b>Род деятельности:</b> {{ account.occupation }}</p>
