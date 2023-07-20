@@ -2,6 +2,8 @@ from django.urls import reverse
 from django.utils import timezone
 from .models import Events, TypeEvents
 from django.test import TestCase
+from django.contrib.auth import get_user_model
+from accounts.models import Account
 
 
 class EventDetailViewTest(TestCase):
@@ -34,3 +36,33 @@ class EventDetailViewTest(TestCase):
         response = self.client.get(url)
 
         self.assertTemplateUsed(response, 'event_detail.html')
+
+
+class IndexViewTest(TestCase):
+    def test_index_view(self):
+        response = self.client.get(reverse('index'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
+
+
+class ProfileDetailViewTest(TestCase):
+    def setUp(self):
+        self.user = get_user_model().objects.create_user(username='testuser@example.com', email='testuser@example.com',
+                                                         password='12345')
+        self.account = Account.objects.create(first_name='John', last_name='Doe')
+
+    def test_profile_detail_view(self):
+        url = reverse('account_detail', kwargs={'pk': self.account.pk})
+        self.client.login(email=self.user.email, password='12345')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'profile_detail.html')
+        self.assertContains(response, self.account.first_name)
+        self.assertContains(response, self.account.last_name)
+
+
+class NewslineViewTestCase(TestCase):
+    def test_auth_required(self):
+        response = self.client.get(reverse('newsline'))
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('login'))
