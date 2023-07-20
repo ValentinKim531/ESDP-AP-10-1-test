@@ -6,10 +6,9 @@ from accounts.models import Account
 
 
 class UserLikeView(APIView):
-    def post(self, request, id, *args, **kwargs):
+    def post(self, request, pk, *args, **kwargs):
         try:
-            page_owner = get_object_or_404(Account, pk=id)
-            print(page_owner)
+            page_owner = get_object_or_404(Account, pk=pk)
             page_owner.likes_qty += 1
             page_owner.save()
             return JsonResponse({"likes_qty": page_owner.likes_qty}, status=200)
