@@ -16,7 +16,7 @@ class AdminRequestListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        requests = AdminRequest.objects.filter(is_deleted=False).order_by("created_at")
+        requests = AdminRequest.objects.filter(is_deleted=False).order_by("-created_at")
         if self.request.GET.get("approved"):
             if self.request.GET.get("approved") == "true":
                 requests = requests.filter(approved=True)
@@ -124,7 +124,6 @@ class AdminRequestCreateView(CreateView):
 class AdminRequestUpdateView(UpdateView):
     model = AdminRequest
     template_name = 'request_update.html'
-    context_object_name = 'request'
 
     def get_context_data(self, **kwargs):
         request_data = get_object_or_404(AdminRequest, pk=self.kwargs.get("pk"))
@@ -135,7 +134,7 @@ class AdminRequestUpdateView(UpdateView):
                 'form_text': AdminRequestSenderTextForm,
                 'type_form': 'chat_request'
             }
-        elif request_data.sub_request:
+        elif request_data.sub_level:
             context = {
                 'form_chat': ChatRequestForm,
                 'form_sub': AdminRequestSubLevelForm(request_data.__dict__),
@@ -149,6 +148,7 @@ class AdminRequestUpdateView(UpdateView):
                 'form_text': AdminRequestSenderTextForm(request_data.__dict__),
                 'type_form': 'def_request'
             }
+        context['request'] = request_data
         return context
 
     def post(self, request, *args, **kwargs):
@@ -166,7 +166,6 @@ class AdminRequestUpdateView(UpdateView):
             form_chat = ChatRequestForm(form_chat_dict)
             form_text = AdminRequestSenderTextForm(form_text_dict)
             if form_chat.is_valid() and form_text.is_valid():
-                user_sender = request.user
                 chat_request = form_chat.save(commit=False)
                 chat_request.save()
                 admin_request = get_object_or_404(AdminRequest, pk=self.kwargs.get("pk"))

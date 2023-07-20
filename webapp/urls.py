@@ -1,5 +1,5 @@
 from django.urls import path
-from webapp.views.events import EventDetailView, EventsBookedView, EventsBookedDeleteView
+from webapp.views.events import EventDetailView, EventsBookedView, EventsBookedDeleteView, EventResidentBookingView
 from webapp.views.news import NewsCreateView, NewsDetail, NewsUpdateView, NewsDeleteView
 from webapp.views.index import index
 from webapp.views.newsline import NewslineView
@@ -18,8 +18,6 @@ urlpatterns = [
     path('accounts/', ProfileListView.as_view(), name='account_list'),
     path('accounts/<int:pk>/', ProfileDetailView.as_view(), name='account_detail'),
     path('events/<int:pk>/', EventDetailView.as_view(), name='events_detail'),
-    path('events/create/', EventsCreateView.as_view(), name='events_create'),
-    path('events/update/<int:pk>/', EventsUpdateView.as_view(), name='events_update'),
     path('requests/', AdminRequestListView.as_view(), name='request_list'),
     path('requests/<int:pk>', AdminRequestDetailView.as_view(), name='request_detail'),
     path('requests/create/', AdminRequestCreateView.as_view(), name='request_create'),
@@ -28,5 +26,6 @@ urlpatterns = [
     path('requests/response/<int:pk>', AdminResponseView.as_view(), name='request_response'),
     path('events_booked/<int:pk>', EventsBookedView.as_view(), name='events_booked'),
     path('events_booked_delete/<int:pk>', EventsBookedDeleteView.as_view(), name='events_booked_delete'),
+    path('event_resident_booking/<int:pk>', EventResidentBookingView.as_view(), name='event_resident_booking'),
     path('json-accounts/', json_accounts, name='json_accounts'),
 ]
