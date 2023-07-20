@@ -31,6 +31,8 @@
                             <a href="">Администратор</a>
                         </div>
                         <a href="" class="exit_but" onclick="event.preventDefault(); logout();">Выйти</a>
+                        <a href="{% url 'voteline' %}" class="exit_but" style="padding-top: 30px;">Список голосований</a>
+                        <a href="{% url 'vote_create_view' %}" class="exit_but">Создание голосования</a>
                     </div>
                 </nav>
             </div>

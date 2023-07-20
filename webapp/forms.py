@@ -1,11 +1,10 @@
 from django import forms
-from .models import Events
+from .models import Events, ListVotes, Vote, VotingOptions
 from webapp.models import News
 from django.core.exceptions import ValidationError
 
 
 class NewsForm(forms.ModelForm):
-
     class Meta:
         model = News
         fields = (
@@ -61,3 +60,35 @@ class EventsForm(forms.ModelForm):
 
 class SearchForm(forms.Form):
     search = forms.CharField(max_length=20, required=False, label="Найти")
+
+
+class ListVoteForm(forms.ModelForm):
+    class Meta:
+        model = ListVotes
+        fields = (
+            'name_of_the_vote', 'user_who_created_list_votes')
+        labels = {
+            "name_of_the_vote": "Название голосования",
+            "user_who_created_list_votes": "Пользовать",
+        }
+
+
+class VoteForm(forms.ModelForm):
+    class Meta:
+        model = Vote
+        fields = (
+            'question_to_vote',)
+        labels = {
+            "question_to_vote": "Вопрос на голосование",
+        }
+
+
+class VotingOptionsForm(forms.ModelForm):
+    class Meta:
+        model = VotingOptions
+        fields = (
+            'vote', 'option',)
+        labels = {
+            "vote": "Голосование",
+            "option": "Вариант",
+        }

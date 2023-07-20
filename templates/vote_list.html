@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Newsline{% endblock %}
+{% block content %}
+    <div class="scrollable-container">
+        <div class="about_current_page">
+            <h1 class="newsline_header">Список голосований</h1>
+        </div>
+        <div class="events_div">
+            <div class="wrapper">
+                     {% for vote in votes %}
+                    <a href="{% url 'vote_detail' vote.pk %}" class="event_card_link">
+                        <div class="event_card">
+                            <div class="event_card_description">
+                                <div class="event_card_description_header_div">
+                                    <h4 class="event_card_description_header">{{ vote.name_of_the_vote }}</h4>
+                                </div>
+                                <div class="event_card_description_div">
+                                    <p class="event_card_description">
+                                       Время окончания голосования: {{ vote.expiration_at }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
