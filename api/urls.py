@@ -48,7 +48,7 @@ urlpatterns = [
     path('request/', RequestApiView.as_view(), name="request"),
     path('request_all/', AdminRequestListApiView.as_view(), name="request_all"),
     path('request/<int:pk>', AdminRequestDetailApiView.as_view(), name="request_detail"),
-    path('user_like/<int:id>', UserLikeView.as_view(), name='user_like'),
+    path('user_like/<int:pk>', UserLikeView.as_view(), name='user_like'),
     path('check_auth/', CheckAuthView.as_view(), name='check_auth'),
     path('evets_booked/', EventsBookedSimpleView.as_view(), name='evets_booked'),
 ]
