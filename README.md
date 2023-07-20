@@ -14,7 +14,32 @@
     </tr>
     <tr>
         <td>обычный пользователь</td>
-        <td>user</td>
+        <td>nurlan@mail.com</td>
+        <td>1234</td>
+    </tr>
+    <tr>
+        <td>обычный пользователь</td>
+        <td>daniyar@mail.com</td>
+        <td>1234</td>
+    </tr>
+    <tr>
+        <td>обычный пользователь</td>
+        <td>ivan@mail.ru</td>
+        <td>1234</td>
+    </tr>
+    <tr>
+        <td>обычный пользователь</td>
+        <td>alibek@mail.com</td>
+        <td>1234</td>
+    </tr>
+    <tr>
+        <td>обычный пользователь</td>
+        <td>alikhan@mail.com</td>
+        <td>1234</td>
+    </tr>
+    <tr>
+        <td>обычный пользователь</td>
+        <td>valentin@mail.ru</td>
         <td>1234</td>
     </tr>
 </table>
