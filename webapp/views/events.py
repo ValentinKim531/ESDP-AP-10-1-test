@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.db.models import Q
+from django.utils import timezone
 from django.shortcuts import redirect, get_object_or_404
 from django.views.generic import DetailView, CreateView, UpdateView, TemplateView
 
@@ -18,13 +18,11 @@ class EventDetailView(DetailView):
         booked_seats = self.object.resident_booked.count()
         available_seats = total_seats - booked_seats
         context['available_seats'] = available_seats
-        context['events_booked'] = False
+        context['booked'] = False
         if self.request.user in self.object.resident_booked.all():
-            context['events_booked'] = True
-        print(context['events_booked'])
+            context['booked'] = True
+        context['resident_booked'] = UserBooked.objects.filter(event=context['event'])
         return context
-
-
 
 
 class EventsCreateView(CreateView):
@@ -71,3 +69,9 @@ class EventsBookedDeleteView(TemplateView):
         return redirect('newsline')
 
 
+class EventResidentBookingView(TemplateView):
+    def get(self, request, *args, **kwargs):
+        resident_booked = get_object_or_404(UserBooked, pk=kwargs.get("pk"))
+        resident_booked.date_of_payment = timezone.now()
+        resident_booked.save()
+        return redirect(request.META.get('HTTP_REFERER','redirect_if_referer_not_found'))
