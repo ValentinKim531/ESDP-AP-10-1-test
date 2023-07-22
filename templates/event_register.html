@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Newsline{% endblock %}
+{% block content %}
+<div style="padding-top: 300px;">
+<h4 class="about_user_name_heading">{{ event.name }}</h4>
+<div class="events_booked_list">
+    {% for booked_resident in resident_booked_list %}
+    <div class="user_card">
+        <a href="{% url 'account_detail' booked_resident.resident.pk %}" class="user_card_link">
+            <div class="about_user">
+                <div class="about_user_name">
+                    <h4 class="about_user_name_heading">{{ booked_resident.resident.first_name }}
+                        {{booked_resident.resident.last_name }}</h4>
+                    <h4 class="about_user_name_heading">{{ booked_resident.resident.cities }}</h4>
+                </div>
+            </div>
+            <div class="user_pic_div">
+                {% if not booked_resident.resident.avatar %}
+                <img src="{% static 'svg/user.png' %}" alt="Avatar" class="user_pic">
+                {% else %}
+                <img src="{{ booked_resident.resident.avatar.image.url }}" alt="" class="user_pic">
+                {% endif %}
+            </div>
+        </a>
+    </div>
+    <div class="resident_booking_link">
+        {% if not booked_resident.date_of_payment %}
+        <a href="{% url 'event_resident_booking' booked_resident.pk %}">Закрепить место</a>
+        {% else %}
+        <p>Место оплачено</p>
+        {% endif %}
+    </div>
+    {% empty %}
+    <div class="user_card">
+        <div class="no_profiles">
+            <h5 class="no_profiles_text">No accounts found</h5>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    </div>
+{% endblock %}
+
