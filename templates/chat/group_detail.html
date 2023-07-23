@@ -35,7 +35,7 @@
                 <a href="{% url 'account_detail' group.creator.pk %}" class="user_card_link">
                     <div class="about_user_chat">
                         <div class="about_user_name_chat">
-                            <h4 class="about_user_name_heading_chat">{{ group.creator.first_name }} {{ group.creator.last_name }}</h4>
+                            <div class="about_user_name_heading_chat">{{ group.creator.first_name }} {{ group.creator.last_name }}</div>
                         </div>
                     </div>
                     <div class="user_pic_div">
@@ -54,7 +54,7 @@
                         <a href="{% url 'account_detail' member.pk %}" class="user_card_link">
                             <div class="about_user_chat">
                                 <div class="about_user_name_chat">
-                                    <h4 class="about_user_name_heading_chat">{{ member.first_name }} {{ member.last_name }}</h4>
+                                    <div class="about_user_name_heading_chat">{{ member.first_name }} {{ member.last_name }}</div>
                                 </div>
                             </div>
                             <div class="user_pic_div">

@@ -11,14 +11,14 @@ body {
 /* Чат */
 
 .chat-thread {
-    margin: 24px auto 0 auto;
+    margin: 15px auto 0 auto;
     padding: 0 20px 0 0;
     list-style: none;
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
     top: 60px;
-    bottom: 80px;
+    bottom: 70px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 4px 10px 4px 10px;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     font: 16px/20px "Noto Sans", sans-serif;
     border-radius: 10px;
     background-color: rgba(25, 147, 147, 0.2);
@@ -79,13 +79,14 @@ body {
     -moz-animation: show-chat-odd 0.15s 1 ease-in;
     -webkit-animation: show-chat-odd 0.15s 1 ease-in;
     float: right;
-    margin-right: 80px;
     color: #0AD5C1;
+    max-width: 80%;
+    word-wrap: break-word;
 }
 
 .chat-thread .current-user {
     float: right;
-    margin-right: 80px;
+    margin-right: 70px;
     color: #0AD5C1;
     background-color: rgba(25, 147, 147, 0.2);
 }
@@ -107,6 +108,30 @@ body {
     border-left: 15px solid transparent;
     left: -15px;
     border-top: 15px solid #ddd;
+}
+
+.user-name {
+    font-size: 0.8em;
+    color: gray;
+}
+
+.timestamp {
+    font-size: 0.7em;
+    color: gray;
+    align-self: flex-end;
+}
+
+.message-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.message-content {
+    overflow: hidden;
+    word-break: break-all;
 }
 
 /* Окно ввода сообщений */
@@ -228,6 +253,28 @@ nav a:hover {
     padding: 0 10px;
 }
 
+.navbar-left,
+.navbar-center,
+.navbar-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    justify-content: flex-start;
+}
+
+.navbar-center {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.navbar-right {
+    justify-content: flex-end;
+}
+
 .navbar-item {
     color: white;
     text-decoration: none;
@@ -248,28 +295,6 @@ nav a:hover {
     width: 30px;
     height: 30px;
     margin-left: 10px;
-}
-
-.user-name {
-    font-size: 0.8em;
-    color: gray;
-}
-
-.timestamp {
-    font-size: 0.7em;
-    color: gray;
-    align-self: flex-end;
-}
-
-.message-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.message-content {
-    margin: 0;
 }
 
 /* Small screens */
