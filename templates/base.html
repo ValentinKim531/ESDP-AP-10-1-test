@@ -30,6 +30,7 @@
                         <span class="burger-bottom"></span>
                     </div>
                     <div class="burger-menu">
+                        <hr style="width: 100%">
                         <div class="navi_admin">
                             <a href="">Администратор</a>
                         </div>
@@ -38,6 +39,7 @@
                         <a href="{% url 'request_list' %}" class="exit_but">Список запросов</a>
                         <a href="{% url 'voteline' %}" class="exit_but" style="padding-top: 30px;">Список голосований</a>
                         <a href="{% url 'vote_create_view' %}" class="exit_but">Создание голосования</a>
+                        <hr style="width: 100%;">
                     </div>
                 </nav>
             </div>
@@ -74,7 +76,7 @@
 
         </div>
     </nav>
-    <div class="container">
+    <div class="container container_content">
         {% block content %}{% endblock %}
     </div>
     <div class="bottom_indent"></div>
