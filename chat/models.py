@@ -1,4 +1,5 @@
 import uuid
+from os.path import basename
 from django.db import models
 from django.utils import timezone
 from enum import Enum
@@ -52,6 +53,9 @@ class File(models.Model):
     room = models.ForeignKey(ChatRoom, on_delete=models.CASCADE, related_name='files')
     chat_message = models.ForeignKey('ChatMessage', on_delete=models.CASCADE, null=True, blank=True,
                                      related_name='related_files')
+
+    def __str__(self):
+        return basename(self.file.name)
 
 
 class ChatMessage(models.Model):

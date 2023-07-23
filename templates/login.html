@@ -16,7 +16,11 @@
             </span>
         </div>
     </form>
-    <div id="message"></div>
+    <div class="new-resident-box">
+        Новый резидент? <br>
+        <a href="{% url 'register' %}">Зарегистрироваться</a>
+    </div>
+    <div id="message" class="message-box"></div>
 {% endblock %}
 {% block script_block %}
     <script src="{% static 'js/login.js' %}"></script>

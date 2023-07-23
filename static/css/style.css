@@ -894,15 +894,16 @@ ul {
     overflow: hidden;
     border-radius: 50%;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
 .avatar-image {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 50%;
 }
 
@@ -964,13 +965,13 @@ ul {
 
 
 .about_user_name_chat {
-    width: 236px;
-    height: 20px;
+    width: 500px;
+    height: auto;
     font-family: 'Playfair Display', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 36px;
+    line-height: 26px;
     text-align: center;
     color: #000000;
     margin-top: 0;
@@ -1181,3 +1182,44 @@ form > p {
     flex-direction: column;
     align-items: center;
 }
+
+.chat_timestamp {
+    color: grey;
+}
+
+.new-resident-box {
+    margin-top: 70px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-resident-box a {
+    color: #007bff;
+    text-decoration: none;
+}
+.new-resident-box a:hover {
+    text-decoration: underline;
+}
+
+.message-box {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 18px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+

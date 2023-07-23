@@ -20,14 +20,18 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         console.log('Login response: ', data);
         if (data.access && data.refresh) {
             console.log('Received Data: ', data);
+            document.getElementById('message').style.display = 'block';
             document.getElementById('message').innerText = 'Login successful!';
             window.location.href = "/newsline/";
         } else {
+            document.getElementById('message').style.display = 'block';
             document.getElementById('message').innerText = 'Login failed.';
             console.error(data);
         }
     })
     .catch((error) => {
         console.error('Error:', error);
+        document.getElementById('message').style.display = 'block';
+        document.getElementById('message').innerText = 'An error occurred.';
     });
 });
