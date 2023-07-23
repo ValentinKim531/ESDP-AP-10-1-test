@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Room</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/chat.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://cdn.jsdelivr.net/gh/centrifugal/centrifuge-js@2.8.3/dist/centrifuge.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
 </head>
@@ -23,7 +23,7 @@
 <nav>
     <div class="navbar-container">
         <div class="navbar-left">
-            <a class="navbar-item" href="{% url 'chat_list' %}">
+            <a class="navbar-item" href="{% url 'chat_list' %}" onclick="refreshPage();">
                 <button>Назад</button>
             </a>
         </div>
@@ -46,18 +46,18 @@
         </div>
         <div class="navbar-right navbar-profile">
             {% if room.is_group_chat %}
-                {% if room.avatar %}
-                <img src="{{ room.avatar.url }}" alt="{{ room.name }}'s avatar" class="navbar-avatar">
-                {% else %}
-                <img src="/uploads/groupchats/default.png" alt="Group Avatar" class="navbar-avatar">
-                {% endif %}
+            {% if room.avatar %}
+            <img src="{{ room.avatar.url }}" alt="{{ room.name }}'s avatar" class="navbar-avatar">
             {% else %}
-                {% if other_user.avatar %}
-                <img src="{{ other_user.avatar.image.url }}"
-                     alt="{{ other_user.first_name }} {{ other_user.last_name }}'s avatar" class="navbar-avatar">
-                {% else %}
-                <img src="{{ other_user.avatar.image.url }}" alt="{{ other_user.email }}'s avatar" class="navbar-avatar">
-                {% endif %}
+            <img src="/uploads/groupchats/default.png" alt="Group Avatar" class="navbar-avatar">
+            {% endif %}
+            {% else %}
+            {% if other_user.avatar %}
+            <img src="{{ other_user.avatar.image.url }}"
+                 alt="{{ other_user.first_name }} {{ other_user.last_name }}'s avatar" class="navbar-avatar">
+            {% else %}
+            <img src="{{ other_user.avatar.image.url }}" alt="{{ other_user.email }}'s avatar" class="navbar-avatar">
+            {% endif %}
             {% endif %}
         </div>
     </div>
@@ -124,6 +124,8 @@ window.onload = function() {
     var chatThread = document.getElementById('chat-thread');
     chatThread.scrollTop = chatThread.scrollHeight;
 };
+
+
 </script>
 </body>
 

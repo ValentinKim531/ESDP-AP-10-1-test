@@ -10,6 +10,10 @@ messageInput.addEventListener('click', function() {
     picker.style.display = 'none';
 });
 
+function refreshPage() {
+    location.reload(true);
+}
+
 emojiButton.addEventListener('click', () => {
     if (picker.style.display === 'none') {
         const messageInputField = document.querySelector('.chat-message');
@@ -67,6 +71,9 @@ const sub = centrifuge.subscribe(channelName, function (ctx) {
             chatImage.src = ctx.data.fileUrl;
             chatImage.alt = ctx.data.message;
             chatImage.classList.add('responsive-image');
+            chatImage.onload = function() {
+                chatThread.scrollTop = chatThread.scrollHeight;
+            };
             chatMessageContent.appendChild(chatImage);
         } else {
             const chatFileLink = document.createElement('a');
