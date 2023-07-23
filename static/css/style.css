@@ -1186,3 +1186,40 @@ form > p {
 .chat_timestamp {
     color: grey;
 }
+
+.new-resident-box {
+    margin-top: 70px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-resident-box a {
+    color: #007bff;
+    text-decoration: none;
+}
+.new-resident-box a:hover {
+    text-decoration: underline;
+}
+
+.message-box {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 18px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+
