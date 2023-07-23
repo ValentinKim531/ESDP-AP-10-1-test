@@ -28,7 +28,7 @@ body {
     clear: both;
     display: flex;
     flex-direction: column;
-    padding: 16px 40px 16px 20px;
+    padding: 4px 10px 4px 10px;
     margin: 0 0 20px 0;
     font: 16px/20px "Noto Sans", sans-serif;
     border-radius: 10px;
@@ -119,13 +119,13 @@ body {
 
 .chat-message-input {
     width: calc(100% - 50px);
-    height: 48px;
-    font: 32px/48px "Noto Sans", sans-serif;
+    height: 36px;
+    font: 24px "Noto Sans", sans-serif;
     background: none;
     color: #0AD5C1;
     border: 1px solid rgba(25, 147, 147, 0.2);
     border-radius: 15px;
-    padding: 0 10px;
+    padding: 0 8px;
     outline: none;
 }
 
@@ -144,6 +144,12 @@ body {
 
 .chat-file-input {
     display: none;
+}
+
+.responsive-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
 }
 
 #emoji-picker {
@@ -263,7 +269,7 @@ nav a:hover {
 }
 
 .message-content {
-    margin: 5px 0;
+    margin: 0;
 }
 
 /* Small screens */
@@ -273,20 +279,32 @@ nav a:hover {
     }
 
     .chat-message {
-        left: 5%;
-        width: 90%;
+        left: 2.5%;
+        width: 95%;
+    }
+
+    .chat-thread li {
+        font-size: 0.9rem;
+    }
+
+    .user-name {
+        font-size: 0.7em;
+    }
+
+    .timestamp {
+        font-size: 0.6em;
     }
 }
 
 /* Medium and large screens */
 @media all and (min-width: 768px) {
     .chat-thread {
-        width: 50%;
+        width: 95%;
     }
 
     .chat-message {
-        left: 25%;
-        width: 50%;
+        left: 2.5%;
+        width: 95%;
     }
 }
 
