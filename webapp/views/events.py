@@ -20,7 +20,23 @@ class EventDetailView(DetailView):
         context['available_seats'] = available_seats
         context['booked'] = False
         if self.request.user in self.object.resident_booked.all():
+            user_booked = UserBooked.objects.get(event=self.object, resident=self.request.user)
+            if user_booked.date_of_payment:
+                context['user_payment'] = True
             context['booked'] = True
+        data = timezone.now()
+        if self.object.start_register_at and self.object.end_register_at:
+            if data <= self.object.end_register_at and data >= self.object.start_register_at:
+                context['data'] = True
+        elif self.object.start_register_at:
+            if data <= self.object.events_at and data >= self.object.start_register_at:
+                context['data'] = True
+        elif self.object.end_register_at:
+            if data <= self.object.end_register_at:
+                context['data'] = True
+        else:
+            if data <= self.object.events_at:
+                context['data'] = True
         context['resident_booked'] = UserBooked.objects.filter(event=context['event'])
         return context
 
@@ -74,4 +90,7 @@ class EventResidentBookingView(TemplateView):
         resident_booked = get_object_or_404(UserBooked, pk=kwargs.get("pk"))
         resident_booked.date_of_payment = timezone.now()
         resident_booked.save()
-        return redirect(request.META.get('HTTP_REFERER','redirect_if_referer_not_found'))
+        return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
+
+
+
