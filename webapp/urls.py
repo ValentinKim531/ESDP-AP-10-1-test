@@ -37,5 +37,4 @@ urlpatterns = [
     path('voteline/', VotelineView.as_view(), name='voteline'),
     path('vote/detail/<int:pk>/', VoteDetailView.as_view(), name='vote_detail'),
     path('vote/user/options/<int:pk>/', VoteBookedView.as_view(), name='vote_user_options'),
-    path('event/register/<int:pk>/', EventsRegisterView.as_view(), name='event_register'),
 ]

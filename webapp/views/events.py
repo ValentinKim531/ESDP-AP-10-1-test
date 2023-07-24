@@ -92,12 +92,4 @@ class EventResidentBookingView(TemplateView):
         return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
 
 
-class EventsRegisterView(TemplateView):
-    template_name = 'event_register.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        event = get_object_or_404(Events, pk=kwargs.get("pk"))
-        context['resident_booked_list'] = UserBooked.objects.filter(event=event)
-        context['event'] = event
-        return context
