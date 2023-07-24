@@ -1272,3 +1272,12 @@ form > p {
 }
 
 
+.profile_card_button_wrapper log .but{
+    display: flex;
+    justify-content: center;
+}
+
+.col-7 card .custom-card{
+    width: 300px;
+    height: 800px;
+}
