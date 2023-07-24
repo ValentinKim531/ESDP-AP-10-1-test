@@ -35,7 +35,7 @@ class GroupDetailView(View):
 class CreateGroupChatView(View):
     def get(self, request):
         form = GroupChatForm(user=request.user)
-        return render(request, 'chat/group_chat.html', {'form': form})
+        return render(request, 'chat/gc_bootstrap.html', {'form': form})
 
     def post(self, request):
         form = GroupChatForm(request.POST, request.FILES, user=request.user)
@@ -47,7 +47,7 @@ class CreateGroupChatView(View):
             form.save_m2m()
             group_chat.users.add(request.user)
             return redirect(reverse('room_view', args=[str(group_chat.id)]))
-        return render(request, 'chat/create_group_chat.html', {'form': form})
+        return render(request, 'chat/gc_bootstrap.html', {'form': form})
 
 
 class UpdateGroupChatView(View):
