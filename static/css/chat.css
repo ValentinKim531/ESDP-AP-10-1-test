@@ -11,14 +11,14 @@ body {
 /* Чат */
 
 .chat-thread {
-    margin: 24px auto 0 auto;
+    margin: 15px auto 0 auto;
     padding: 0 20px 0 0;
     list-style: none;
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
     top: 60px;
-    bottom: 80px;
+    bottom: 70px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -28,8 +28,8 @@ body {
     clear: both;
     display: flex;
     flex-direction: column;
-    padding: 16px 40px 16px 20px;
-    margin: 0 0 20px 0;
+    padding: 4px 10px 4px 10px;
+    margin: 0 0 10px 0;
     font: 16px/20px "Noto Sans", sans-serif;
     border-radius: 10px;
     background-color: rgba(25, 147, 147, 0.2);
@@ -79,13 +79,14 @@ body {
     -moz-animation: show-chat-odd 0.15s 1 ease-in;
     -webkit-animation: show-chat-odd 0.15s 1 ease-in;
     float: right;
-    margin-right: 80px;
     color: #0AD5C1;
+    max-width: 80%;
+    word-wrap: break-word;
 }
 
 .chat-thread .current-user {
     float: right;
-    margin-right: 80px;
+    margin-right: 70px;
     color: #0AD5C1;
     background-color: rgba(25, 147, 147, 0.2);
 }
@@ -109,6 +110,30 @@ body {
     border-top: 15px solid #ddd;
 }
 
+.user-name {
+    font-size: 0.8em;
+    color: gray;
+}
+
+.timestamp {
+    font-size: 0.7em;
+    color: gray;
+    align-self: flex-end;
+}
+
+.message-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.message-content {
+    overflow: hidden;
+    word-break: break-all;
+}
+
 /* Окно ввода сообщений */
 .chat-message {
     position: fixed;
@@ -119,13 +144,13 @@ body {
 
 .chat-message-input {
     width: calc(100% - 50px);
-    height: 48px;
-    font: 32px/48px "Noto Sans", sans-serif;
+    height: 36px;
+    font: 24px "Noto Sans", sans-serif;
     background: none;
     color: #0AD5C1;
     border: 1px solid rgba(25, 147, 147, 0.2);
     border-radius: 15px;
-    padding: 0 10px;
+    padding: 0 8px;
     outline: none;
 }
 
@@ -144,6 +169,12 @@ body {
 
 .chat-file-input {
     display: none;
+}
+
+.responsive-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
 }
 
 #emoji-picker {
@@ -222,6 +253,28 @@ nav a:hover {
     padding: 0 10px;
 }
 
+.navbar-left,
+.navbar-center,
+.navbar-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    justify-content: flex-start;
+}
+
+.navbar-center {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.navbar-right {
+    justify-content: flex-end;
+}
+
 .navbar-item {
     color: white;
     text-decoration: none;
@@ -244,28 +297,6 @@ nav a:hover {
     margin-left: 10px;
 }
 
-.user-name {
-    font-size: 0.8em;
-    color: gray;
-}
-
-.timestamp {
-    font-size: 0.7em;
-    color: gray;
-    align-self: flex-end;
-}
-
-.message-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.message-content {
-    margin: 5px 0;
-}
-
 /* Small screens */
 @media all and (max-width: 767px) {
     .chat-thread {
@@ -273,20 +304,32 @@ nav a:hover {
     }
 
     .chat-message {
-        left: 5%;
-        width: 90%;
+        left: 2.5%;
+        width: 95%;
+    }
+
+    .chat-thread li {
+        font-size: 0.9rem;
+    }
+
+    .user-name {
+        font-size: 0.7em;
+    }
+
+    .timestamp {
+        font-size: 0.6em;
     }
 }
 
 /* Medium and large screens */
 @media all and (min-width: 768px) {
     .chat-thread {
-        width: 50%;
+        width: 95%;
     }
 
     .chat-message {
-        left: 25%;
-        width: 50%;
+        left: 2.5%;
+        width: 95%;
     }
 }
 

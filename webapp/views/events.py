@@ -37,6 +37,7 @@ class EventDetailView(DetailView):
         else:
             if data <= self.object.events_at:
                 context['data'] = True
+        context['resident_booked'] = UserBooked.objects.filter(event=context['event'])
         return context
 
 

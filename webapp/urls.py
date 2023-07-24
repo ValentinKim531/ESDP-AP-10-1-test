@@ -1,6 +1,5 @@
 from django.urls import path
-from webapp.views.events import EventDetailView, EventsBookedView, EventsBookedDeleteView, EventResidentBookingView, \
-    EventsRegisterView
+from webapp.views.events import EventDetailView, EventsBookedView, EventsBookedDeleteView, EventResidentBookingView
 from webapp.views.news import NewsCreateView, NewsDetail, NewsUpdateView, NewsDeleteView
 from webapp.views.index import index
 from webapp.views.newsline import NewslineView
