@@ -53,8 +53,8 @@
                     <div class="about_user_scope">
                         <h5 class="about_user_scope_heading">
                             {% if item.chat %}
-                            {{ item.chat.message|slice:":30" }}
-                            {% if item.chat.message|length > 30 %}
+                            {{ item.chat.message|slice:":20" }}
+                            {% if item.chat.message|length > 20 %}
                             ...
                             {% endif %}
                             {% else %}
