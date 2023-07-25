@@ -1,5 +1,6 @@
 from django.urls import path
-from webapp.views.events import EventDetailView, EventsBookedView, EventsBookedDeleteView, EventResidentBookingView
+from webapp.views.events import EventDetailView, EventsBookedView, EventsBookedDeleteView, EventResidentBookingView, \
+    EventsUpdateView
 from webapp.views.news import NewsCreateView, NewsDetail, NewsUpdateView, NewsDeleteView
 from webapp.views.index import index
 from webapp.views.newsline import NewslineView
@@ -20,6 +21,7 @@ urlpatterns = [
     path('accounts/', ProfileListView.as_view(), name='account_list'),
     path('accounts/<int:pk>/', ProfileDetailView.as_view(), name='account_detail'),
     path('events/<int:pk>/', EventDetailView.as_view(), name='events_detail'),
+    path('events/update/<int:pk>/', EventsUpdateView.as_view(), name='events_update'),
     path('requests/', AdminRequestListView.as_view(), name='request_list'),
     path('requests/<int:pk>', AdminRequestDetailView.as_view(), name='request_detail'),
     path('requests/create/', AdminRequestCreateView.as_view(), name='request_create'),
