@@ -3313,7 +3313,7 @@
   "model": "accounts.account",
   "pk": 26,
   "fields": {
-    "password": "1234",
+    "password": "pbkdf2_sha256$600000$jcvntqVn1IbrljutRoPyAs$QFMfb8FGKLbvSZBLBEoA4xCUlz+WcSFLzQVpAdOOjz0=",
     "last_login": null,
     "is_superuser": false,
     "is_staff": false,
@@ -3360,7 +3360,7 @@
   "model": "accounts.account",
   "pk": 27,
   "fields": {
-    "password": "1234",
+    "password": "pbkdf2_sha256$600000$HMWBnNsFNP4SQahxjPCgy6$WP2dkMlJ9nyrQ/SN3OPYHD4HwYrT3y50WguUfBjB1Rc=",
     "last_login": null,
     "is_superuser": false,
     "is_staff": false,
@@ -3407,7 +3407,7 @@
   "model": "accounts.account",
   "pk": 28,
   "fields": {
-    "password": "1234",
+    "password": "pbkdf2_sha256$600000$xhQqolx5pkLgEedjfCQj8g$MFCp05E3qKQ0gOnbKXakWYayNoea647KcwUeYOd9AY0=",
     "last_login": null,
     "is_superuser": false,
     "is_staff": false,
@@ -3454,7 +3454,7 @@
   "model": "accounts.account",
   "pk": 29,
   "fields": {
-    "password": "1234",
+    "password": "pbkdf2_sha256$600000$yq9rB5gxxfB7k0P9wz8V92$2snPa92Rxt6yVPAq84yoAhhjML0yIYVMrH8XbdOJHZE=",
     "last_login": null,
     "is_superuser": false,
     "is_staff": false,
@@ -3501,7 +3501,7 @@
   "model": "accounts.account",
   "pk": 30,
   "fields": {
-    "password": "1234",
+    "password": "pbkdf2_sha256$600000$RgHNoYCC1PrWfaS5HnHFsj$ZUAFsZk9yqHAtswqvnimZgk6aI3At6uwa4ZkrkbBYIA=",
     "last_login": null,
     "is_superuser": false,
     "is_staff": false,
@@ -3548,7 +3548,7 @@
   "model": "accounts.account",
   "pk": 31,
   "fields": {
-    "password": "1234",
+    "password": "pbkdf2_sha256$600000$usZ8UQmWcRBQ6GjI1Y3jze$ErAcI4ruaWlmO0FtWqSIPZMxy6eDo/i1oDDL5tw4CFA=",
     "last_login": null,
     "is_superuser": false,
     "is_staff": false,
