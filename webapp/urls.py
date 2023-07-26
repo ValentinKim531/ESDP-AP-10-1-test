@@ -21,6 +21,7 @@ urlpatterns = [
     path('accounts/', ProfileListView.as_view(), name='account_list'),
     path('accounts/<int:pk>/', ProfileDetailView.as_view(), name='account_detail'),
     path('events/<int:pk>/', EventDetailView.as_view(), name='events_detail'),
+    path('calendar/events/<int:pk>/', EventDetailView.as_view(), name='events_detail'),
     path('events/update/<int:pk>/', EventsUpdateView.as_view(), name='events_update'),
     path('requests/', AdminRequestListView.as_view(), name='request_list'),
     path('requests/<int:pk>', AdminRequestDetailView.as_view(), name='request_detail'),
