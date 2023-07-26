@@ -1,6 +1,7 @@
 from django import forms
 from accounts.models import Account
 from chat.models import ChatRoom
+from django import forms
 
 
 class GroupChatForm(forms.ModelForm):
@@ -31,4 +32,3 @@ class GroupChatForm(forms.ModelForm):
     class Meta:
         model = ChatRoom
         fields = ['name', 'description', 'avatar', 'users']
-
