@@ -29,6 +29,15 @@
                 </div>
             </a>
         </div>
+        <div class="create_chat_div">
+            <a href="{% url 'start_channel' %}" class="user_card_link">
+                <div class="profile_card_button_wrapper">
+                        <span class="profile_card_button">
+                        Создать канал
+                        </span>
+                </div>
+            </a>
+        </div>
         {% if not chats_with_recipients %}
         <div class="user_card">
             <div class="no_profiles">
