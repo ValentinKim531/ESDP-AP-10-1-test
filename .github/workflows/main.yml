@@ -29,7 +29,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd /root/titany/ESDP-AP-10-1-test
+            cd /root/titany/ESDP-AP-10-1-test/ESDP-AP-10-1-test
             git pull
             docker compose down --remove-orphans
             docker compose build
