@@ -24,7 +24,7 @@ jobs:
       - name: Clone repo and create environment
         uses: appleboy/ssh-action@master
         with:
-          host: 138.68.78.122
+          host: ${{ vars.SSH_HOST }}
           username: ${{ vars.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
