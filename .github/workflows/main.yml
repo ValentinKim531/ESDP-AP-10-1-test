@@ -16,9 +16,9 @@ jobs:
 
     steps:
       - name: Install SSH key
-        uses: actions/ssh-key-action@v2
+        uses: shimataro/ssh-key-action@v3
         with:
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: 'any_host'
 
       - name: Clone repo and create environment
