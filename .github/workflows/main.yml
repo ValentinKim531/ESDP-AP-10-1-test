@@ -24,16 +24,16 @@ jobs:
       - name: Clone repo and create environment
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ vars.SSH_HOST }}
-          username: ${{ vars.SSH_USER }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd /titany/ESDP-AP-10-1-test/ESDP-AP-10-1-test
+            cd /titany/ESDP-AP-10-1-test
             git pull origin master
-            docker compose down --remove-orphans
-            docker compose build
-            docker compose up -d
+            docker-compose down --remove-orphans
+            docker-compose build
+            docker-compose up -d
             exit
 
 
